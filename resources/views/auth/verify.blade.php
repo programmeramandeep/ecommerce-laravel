@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="register-account ptb-60">
+<div class="register-account pb-60">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">

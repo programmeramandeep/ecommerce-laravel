@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Register Account Start -->
-<div class="register-account ptb-20">
+<div class="register-account pb-20">
     <div class="container">
         <div class="register-title">
             <h3 class="mb-10">{{ __('Reset Password') }}</h3>

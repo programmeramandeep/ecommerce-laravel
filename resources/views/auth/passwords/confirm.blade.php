@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="register-account ptb-20">
+<div class="register-account pb-20">
     <div class="container">
         <div class="register-title">
             <h3 class="mb-10">{{ __('Confirm Password') }}</h3>

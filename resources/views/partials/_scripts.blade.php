@@ -19,8 +19,6 @@
 <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
 <!-- bootstrap -->
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-<!-- popper -->
-<script src="{{ asset('js/popper.js') }}"></script>
 <!-- plugins -->
 <script src="{{ asset('js/plugins.js') }}"></script>
 <!-- main js -->

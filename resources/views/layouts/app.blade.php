@@ -31,7 +31,7 @@
         @include('partials/_header')
 
         {{-- Breadcrumd --}}
-        {{-- @include('partials/_breadcrumb') --}}
+        @include('partials/_breadcrumb')
 
         {{-- Main Content --}}
         <main>

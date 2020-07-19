@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="log-in ptb-60">
+<div class="log-in pb-60">
     <div class="container">
         <div class="row">
             <!-- New Customer Start -->
