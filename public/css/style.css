@@ -534,6 +534,10 @@ ul.ht-dropdown.dropdown-style-two li {
     text-transform: uppercase;
 }
 
+.middle-menu-list>li>a.active {
+    color: #f1ac06;
+}
+
 .middle-menu-list>li:first-child>a {
     padding-left: 0;
 }

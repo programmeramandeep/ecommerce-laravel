@@ -1,6 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-area ptb-60 ptb-sm-30">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li class="active"><a href="{{ route('shop.index') }}">Shop</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Breadcrumb End -->
+
 <!-- Shop Page Start -->
 <div class="main-shop-page pb-60">
     <div class="container">
@@ -91,7 +105,7 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('/img/products/1.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('/img/products/tool-1.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -120,7 +134,7 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('/img/products/2.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('/img/products/tool-2.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -149,7 +163,7 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('/img/products/3.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('/img/products/tool-3.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -185,7 +199,7 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('/img/products/4.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('/img/products/tool-4.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -214,7 +228,7 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('/img/products/1.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('/img/products/tool-1.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -243,7 +257,7 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('/img/products/2.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('/img/products/tool-2.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -316,10 +330,12 @@
                                     <div class="single-product">
                                         <!-- Product Image Start -->
                                         <div class="pro-img">
-                                            <a href="">
-                                                <img class="primary-img" src="{{ asset('/img/products/1.jpg') }}"
+                                            <a href="{{ route('shop.show', $product->slug) }}">
+                                                <img class="primary-img"
+                                                    src="{{ asset('/img/products/'.$product->slug.'.jpg') }}"
                                                     alt="single-product">
-                                                <img class="secondary-img" src="{{ asset('/img/products/2.jpg') }}"
+                                                <img class="secondary-img"
+                                                    src="{{ asset('/img/products/'.$product->slug.'.jpg') }}"
                                                     alt="single-product">
                                             </a>
                                         </div>
@@ -333,7 +349,9 @@
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                             </div>
-                                            <h4><a href="">{{ $product->name }}</a></h4>
+                                            <h4><a
+                                                    href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
+                                            </h4>
                                             <p><span class="price">{{ $product->presentPrice() }}</span><del
                                                     class="prev-price">$32.00</del></p>
                                             <div class="pro-actions">
@@ -361,10 +379,12 @@
                             <div class="single-product">
                                 <!-- Product Image Start -->
                                 <div class="pro-img">
-                                    <a href="">
-                                        <img class="primary-img" src="{{ asset('/img/products/1.jpg') }}"
+                                    <a href="{{ route('shop.show', $product->slug) }}">
+                                        <img class="primary-img"
+                                            src="{{ asset('/img/products/'.$product->slug.'.jpg') }}"
                                             alt="single-product">
-                                        <img class="secondary-img" src="{{ asset('/img/products/2.jpg') }}"
+                                        <img class="secondary-img"
+                                            src="{{ asset('/img/products/'.$product->slug.'.jpg') }}"
                                             alt="single-product">
                                     </a>
                                 </div>
@@ -378,7 +398,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                     </div>
-                                    <h4><a href="">{{ $product->name }}</a></h4>
+                                    <h4><a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a></h4>
                                     <p><span class="price">{{ $product->presentPrice() }}</span><del
                                             class="prev-price">$32.00</del></p>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati velit,

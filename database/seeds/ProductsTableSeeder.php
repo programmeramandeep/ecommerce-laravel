@@ -13,80 +13,80 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         Product::create([
-            'name' => 'Laptop 1',
-            'slug' => 'laptop-1',
+            'name' => 'Tool 1',
+            'slug' => 'tool-1',
             'details' => 'Dolor ea non voluptate sit sunt excepteur excepteur officia nulla deserunt.',
             'price' => 149999,
             'description' => 'Ea mollit aute velit pariatur qui elit aute. Veniam magna esse sit aliquip eu ipsum aliquip pariatur dolor ut sit ut incididunt mollit. Mollit occaecat aliquip nisi proident nisi enim nisi. Pariatur adipisicing laborum velit sint. Consectetur excepteur proident ullamco enim Lorem sint.',
         ]);
 
         Product::create([
-            'name' => 'Laptop 2',
-            'slug' => 'laptop-2',
+            'name' => 'Tool 2',
+            'slug' => 'tool-2',
             'details' => 'Dolor ea non voluptate sit sunt excepteur excepteur officia nulla deserunt.',
             'price' => 149999,
             'description' => 'Ea mollit aute velit pariatur qui elit aute. Veniam magna esse sit aliquip eu ipsum aliquip pariatur dolor ut sit ut incididunt mollit. Mollit occaecat aliquip nisi proident nisi enim nisi. Pariatur adipisicing laborum velit sint. Consectetur excepteur proident ullamco enim Lorem sint.',
         ]);
 
         Product::create([
-            'name' => 'Laptop 3',
-            'slug' => 'laptop-3',
+            'name' => 'Tool 3',
+            'slug' => 'tool-3',
             'details' => 'Dolor ea non voluptate sit sunt excepteur excepteur officia nulla deserunt.',
             'price' => 149999,
             'description' => 'Ea mollit aute velit pariatur qui elit aute. Veniam magna esse sit aliquip eu ipsum aliquip pariatur dolor ut sit ut incididunt mollit. Mollit occaecat aliquip nisi proident nisi enim nisi. Pariatur adipisicing laborum velit sint. Consectetur excepteur proident ullamco enim Lorem sint.',
         ]);
 
         Product::create([
-            'name' => 'Laptop 4',
-            'slug' => 'laptop-4',
+            'name' => 'Tool 4',
+            'slug' => 'tool-4',
             'details' => 'Dolor ea non voluptate sit sunt excepteur excepteur officia nulla deserunt.',
             'price' => 149999,
             'description' => 'Ea mollit aute velit pariatur qui elit aute. Veniam magna esse sit aliquip eu ipsum aliquip pariatur dolor ut sit ut incididunt mollit. Mollit occaecat aliquip nisi proident nisi enim nisi. Pariatur adipisicing laborum velit sint. Consectetur excepteur proident ullamco enim Lorem sint.',
         ]);
 
         Product::create([
-            'name' => 'Laptop 5',
-            'slug' => 'laptop-5',
+            'name' => 'Tool 5',
+            'slug' => 'tool-5',
             'details' => 'Dolor ea non voluptate sit sunt excepteur excepteur officia nulla deserunt.',
             'price' => 149999,
             'description' => 'Ea mollit aute velit pariatur qui elit aute. Veniam magna esse sit aliquip eu ipsum aliquip pariatur dolor ut sit ut incididunt mollit. Mollit occaecat aliquip nisi proident nisi enim nisi. Pariatur adipisicing laborum velit sint. Consectetur excepteur proident ullamco enim Lorem sint.',
         ]);
 
         Product::create([
-            'name' => 'Laptop 6',
-            'slug' => 'laptop-6',
+            'name' => 'Tool 6',
+            'slug' => 'tool-6',
             'details' => 'Dolor ea non voluptate sit sunt excepteur excepteur officia nulla deserunt.',
             'price' => 149999,
             'description' => 'Ea mollit aute velit pariatur qui elit aute. Veniam magna esse sit aliquip eu ipsum aliquip pariatur dolor ut sit ut incididunt mollit. Mollit occaecat aliquip nisi proident nisi enim nisi. Pariatur adipisicing laborum velit sint. Consectetur excepteur proident ullamco enim Lorem sint.',
         ]);
 
         Product::create([
-            'name' => 'Laptop 7',
-            'slug' => 'laptop-7',
+            'name' => 'Tool 7',
+            'slug' => 'tool-7',
             'details' => 'Dolor ea non voluptate sit sunt excepteur excepteur officia nulla deserunt.',
             'price' => 149999,
             'description' => 'Ea mollit aute velit pariatur qui elit aute. Veniam magna esse sit aliquip eu ipsum aliquip pariatur dolor ut sit ut incididunt mollit. Mollit occaecat aliquip nisi proident nisi enim nisi. Pariatur adipisicing laborum velit sint. Consectetur excepteur proident ullamco enim Lorem sint.',
         ]);
 
         Product::create([
-            'name' => 'Laptop 8',
-            'slug' => 'laptop-8',
+            'name' => 'Tool 8',
+            'slug' => 'tool-8',
             'details' => 'Dolor ea non voluptate sit sunt excepteur excepteur officia nulla deserunt.',
             'price' => 149999,
             'description' => 'Ea mollit aute velit pariatur qui elit aute. Veniam magna esse sit aliquip eu ipsum aliquip pariatur dolor ut sit ut incididunt mollit. Mollit occaecat aliquip nisi proident nisi enim nisi. Pariatur adipisicing laborum velit sint. Consectetur excepteur proident ullamco enim Lorem sint.',
         ]);
 
         Product::create([
-            'name' => 'Laptop 9',
-            'slug' => 'laptop-9',
+            'name' => 'Tool 9',
+            'slug' => 'tool-9',
             'details' => 'Dolor ea non voluptate sit sunt excepteur excepteur officia nulla deserunt.',
             'price' => 149999,
             'description' => 'Ea mollit aute velit pariatur qui elit aute. Veniam magna esse sit aliquip eu ipsum aliquip pariatur dolor ut sit ut incididunt mollit. Mollit occaecat aliquip nisi proident nisi enim nisi. Pariatur adipisicing laborum velit sint. Consectetur excepteur proident ullamco enim Lorem sint.',
         ]);
 
         Product::create([
-            'name' => 'Laptop 10',
-            'slug' => 'laptop-10',
+            'name' => 'Tool 10',
+            'slug' => 'tool-10',
             'details' => 'Dolor ea non voluptate sit sunt excepteur excepteur officia nulla deserunt.',
             'price' => 149999,
             'description' => 'Ea mollit aute velit pariatur qui elit aute. Veniam magna esse sit aliquip eu ipsum aliquip pariatur dolor ut sit ut incididunt mollit. Mollit occaecat aliquip nisi proident nisi enim nisi. Pariatur adipisicing laborum velit sint. Consectetur excepteur proident ullamco enim Lorem sint.',

@@ -32,9 +32,6 @@
         {{-- Header --}}
         @include('partials/_header')
 
-        {{-- Breadcrumd --}}
-        @include('partials/_breadcrumb')
-
         {{-- Main Content --}}
         <main>
             @yield('content')

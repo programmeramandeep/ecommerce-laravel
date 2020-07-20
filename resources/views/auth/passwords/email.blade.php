@@ -1,6 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-area ptb-60 ptb-sm-30">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li class="active"><a href="{{ route('password.request') }}">Password Reset</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Breadcrumb End -->
+
 <!-- Register Account Start -->
 <div class="register-account pb-20">
     <div class="container">

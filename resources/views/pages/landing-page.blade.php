@@ -89,9 +89,11 @@
             <div class="single-product">
                 <!-- Product Image Start -->
                 <div class="pro-img">
-                    <a href="">
-                        <img class="primary-img" src="{{ asset('img/products/7.jpg') }}" alt="single-product">
-                        <img class="secondary-img" src="{{ asset('img/products/8.jpg') }}" alt="single-product">
+                    <a href="{{ route('shop.show', $product->slug) }}">
+                        <img class="primary-img" src="{{ asset('img/products/'.$product->slug.'.jpg') }}"
+                            alt="single-product">
+                        <img class="secondary-img" src="{{ asset('img/products/'.$product->slug.'.jpg') }}"
+                            alt="single-product">
                     </a>
                 </div>
                 <!-- Product Image End -->
@@ -164,7 +166,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/1.jpg') }}"
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-1.jpg') }}"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -183,7 +185,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/2.jpg') }}"
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -202,7 +204,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/3.jpg') }}"
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-3.jpg') }}"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -221,7 +223,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/4.jpg') }}"
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-4.jpg') }}"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -240,106 +242,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/2.jpg') }}"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                        </div>
-                        <!-- Double Product End -->
-                        <!-- Double Product Start -->
-                        <div class="double-pro">
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/4.jpg') }}"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/3.jpg') }}"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/1.jpg') }}"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/2.jpg') }}"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/4.jpg') }}"
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -362,7 +265,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/1.jpg') }}"
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-4.jpg') }}"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -381,7 +284,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/2.jpg') }}"
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-3.jpg') }}"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -400,7 +303,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/3.jpg') }}"
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-1.jpg') }}"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -419,7 +322,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/4.jpg') }}"
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -438,7 +341,106 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/2.jpg') }}"
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-4.jpg') }}"
+                                            alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                        </div>
+                        <!-- Double Product End -->
+                        <!-- Double Product Start -->
+                        <div class="double-pro">
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-1.jpg') }}"
+                                            alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                            alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                            alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-4.jpg') }}"
+                                            alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -481,82 +483,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/1.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('img/products/tool-1.jpg') }}"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}"
-                                                alt="single-product">
-                                        </a>
-                                    </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="pro-content">
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <h4><a href="">Products Name Here</a></h4>
-                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                        <div class="pro-actions">
-                                            <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
-                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Product Content End -->
-                                </div>
-                                <!-- Single Product End -->
-                                <!-- Single Product Start -->
-                                <div class="single-product">
-                                    <!-- Product Image Start -->
-                                    <div class="pro-img">
-                                        <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/2.jpg') }}"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/3.jpg') }}"
-                                                alt="single-product">
-                                        </a>
-                                    </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="pro-content">
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <h4><a href="">Products Name Here</a></h4>
-                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                        <div class="pro-actions">
-                                            <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
-                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Product Content End -->
-                                    <span class="sticker-new">-30%</span>
-                                </div>
-                                <!-- Single Product End -->
-                                <!-- Single Product Start -->
-                                <div class="single-product">
-                                    <!-- Product Image Start -->
-                                    <div class="pro-img">
-                                        <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/3.jpg') }}"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/4.jpg') }}"
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-2.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -590,9 +519,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/1.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('img/products/tool-2.jpg') }}"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}"
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-3.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -627,9 +556,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/2.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('img/products/tool-3.jpg') }}"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/3.jpg') }}"
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-4.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -663,9 +592,82 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/3.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('img/products/tool-1.jpg') }}"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/4.jpg') }}"
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                                alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4><a href="">Products Name Here</a></h4>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-secondary">
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
+                                                        class="fa fa-heart"></i></a>
+                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
+                                                        class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">-30%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="">
+                                            <img class="primary-img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                                alt="single-product">
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                                alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4><a href="">Products Name Here</a></h4>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-secondary">
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
+                                                        class="fa fa-heart"></i></a>
+                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
+                                                        class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="">
+                                            <img class="primary-img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                                alt="single-product">
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-4.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -707,9 +709,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/4.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('img/products/tool-4.jpg') }}"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/3.jpg') }}"
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-3.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -743,9 +745,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/3.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('img/products/tool-3.jpg') }}"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}"
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-2.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -780,45 +782,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/1.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('img/products/tool-1.jpg') }}"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}"
-                                                alt="single-product">
-                                        </a>
-                                    </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="pro-content">
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <h4><a href="">Products Name Here</a></h4>
-                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                        <div class="pro-actions">
-                                            <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
-                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Product Content End -->
-                                </div>
-                                <!-- Single Product End -->
-                                <!-- Single Product Start -->
-                                <div class="single-product">
-                                    <!-- Product Image Start -->
-                                    <div class="pro-img">
-                                        <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/1.jpg') }}"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}"
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-2.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -852,9 +818,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/2.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('img/products/tool-1.jpg') }}"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/3.jpg') }}"
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-2.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -888,9 +854,45 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/3.jpg') }}"
+                                            <img class="primary-img" src="{{ asset('img/products/tool-2.jpg') }}"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/4.jpg') }}"
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                                alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4><a href="">Products Name Here</a></h4>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-secondary">
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
+                                                        class="fa fa-heart"></i></a>
+                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
+                                                        class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="">
+                                            <img class="primary-img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                                alt="single-product">
+                                            <img class="secondary-img" src="{{ asset('img/products/tool-4.jpg') }}"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -1009,7 +1011,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/1.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-1.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1027,7 +1030,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/2.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1049,7 +1053,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/3.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1067,7 +1072,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/4.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-4.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1089,7 +1095,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/5.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-5.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1107,7 +1114,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/6.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-6.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1129,7 +1137,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/7.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-7.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1147,7 +1156,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/8.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-8.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1169,7 +1179,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/5.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-5.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1187,7 +1198,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/6.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-6.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1209,7 +1221,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/7.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-7.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1227,7 +1240,8 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/8.jpg') }}" alt="product-image"></a>
+                        <a href=""><img class="img" src="{{ asset('img/products/tool-8.jpg') }}"
+                                alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">

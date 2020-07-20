@@ -3,6 +3,21 @@
 @section('title', $product->name)
 
 @section('content')
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-area ptb-60 ptb-sm-30">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li class="active"><a href="{{ route('shop.index') }}">Shop</a></li>
+                <li class="active"><a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Breadcrumb End -->
+
 <!-- Product Thumbnail Start -->
 <div class="main-product-thumbnail pb-60">
     <div class="container">
@@ -12,20 +27,20 @@
                 <!-- Thumbnail Large Image start -->
                 <div class="tab-content">
                     <div id="thumb1" class="tab-pane active">
-                        <a data-fancybox="images" href="{{ asset('img/products/1.jpg') }}"><img
-                                src="{{ asset('img/products/1.jpg') }}" alt="product-view"></a>
+                        <a data-fancybox="images" href="{{ asset('img/products/'.$product->slug.'.jpg') }}"><img
+                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-view"></a>
                     </div>
                     <div id="thumb2" class="tab-pane">
-                        <a data-fancybox="images" href="{{ asset('img/products/2.jpg') }}"><img
-                                src="{{ asset('img/products/2.jpg') }}" alt="product-view"></a>
+                        <a data-fancybox="images" href="{{ asset('img/products/'.$product->slug.'.jpg') }}"><img
+                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-view"></a>
                     </div>
                     <div id="thumb3" class="tab-pane">
-                        <a data-fancybox="images" href="{{ asset('img/products/3.jpg') }}"><img
-                                src="{{ asset('img/products/3.jpg') }}" alt="product-view"></a>
+                        <a data-fancybox="images" href="{{ asset('img/products/'.$product->slug.'.jpg') }}"><img
+                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-view"></a>
                     </div>
                     <div id="thumb4" class="tab-pane">
-                        <a data-fancybox="images" href="{{ asset('img/products/4.jpg') }}"><img
-                                src="{{ asset('img/products/4.jpg') }}" alt="product-view"></a>
+                        <a data-fancybox="images" href="{{ asset('img/products/'.$product->slug.'.jpg') }}"><img
+                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-view"></a>
                     </div>
                 </div>
                 <!-- Thumbnail Large Image End -->
@@ -33,14 +48,14 @@
                 <!-- Thumbnail Image End -->
                 <div class="product-thumbnail">
                     <div class="thumb-menu nav">
-                        <a class="active" data-toggle="tab" href="#thumb1"> <img src="{{ asset('img/products/1.jpg') }}"
-                                alt="product-thumbnail"></a>
-                        <a data-toggle="tab" href="#thumb2"> <img src="{{ asset('img/products/2.jpg') }}"
-                                alt="product-thumbnail"></a>
-                        <a data-toggle="tab" href="#thumb3"> <img src="{{ asset('img/products/3.jpg') }}"
-                                alt="product-thumbnail"></a>
-                        <a data-toggle="tab" href="#thumb4"> <img src="{{ asset('img/products/4.jpg') }}"
-                                alt="product-thumbnail"></a>
+                        <a class="active" data-toggle="tab" href="#thumb1"> <img
+                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-thumbnail"></a>
+                        <a data-toggle="tab" href="#thumb2"> <img
+                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-thumbnail"></a>
+                        <a data-toggle="tab" href="#thumb3"> <img
+                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-thumbnail"></a>
+                        <a data-toggle="tab" href="#thumb4"> <img
+                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-thumbnail"></a>
                     </div>
                 </div>
                 <!-- Thumbnail image end -->
@@ -142,7 +157,7 @@
                                     <i class="fa fa-star-o"></i>
                                     <i class="fa fa-star-o"></i>
                                     <i class="fa fa-star-o"></i>
-                                    <label>Review by <a href="https://themeforest.net/user/Jantrik">Jantrik</a></label>
+                                    <label>Review by <a href="">Jantrik</a></label>
                                 </li>
                                 <!-- Single Review List End -->
                                 <!-- Single Review List Start -->
@@ -227,371 +242,7 @@
     <!-- Container End -->
 </div>
 <!-- Product Thumbnail Description End -->
-<!-- Realted Product Start -->
-<div class="related-product pb-30">
-    <div class="container">
-        <div class="related-box">
-            <div class="group-title">
-                <h2>related product</h2>
-            </div>
-            <!-- Realted Product Activation Start -->
-            <div class="new-upsell-pro owl-carousel">
-                <!-- Single Product Start -->
-                <div class="single-product">
-                    <!-- Product Image Start -->
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="primary-img" src="{{ asset('img/products/4.jpg') }}" alt="single-product">
-                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}" alt="single-product">
-                        </a>
-                    </div>
-                    <!-- Product Image End -->
-                    <!-- Product Content Start -->
-                    <div class="pro-content">
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4><a href="">Products Name Here</a></h4>
-                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                        <div class="pro-actions">
-                            <div class="actions-secondary">
-                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To
-                                    Cart</a>
-                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Content End -->
-                    <span class="sticker-new">-32%</span>
-                </div>
-                <!-- Single Product End -->
-                <!-- Single Product Start -->
-                <div class="single-product">
-                    <!-- Product Image Start -->
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="primary-img" src="{{ asset('img/products/1.jpg') }}" alt="single-product">
-                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}" alt="single-product">
-                        </a>
-                    </div>
-                    <!-- Product Image End -->
-                    <!-- Product Content Start -->
-                    <div class="pro-content">
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4><a href="">Products Name Here</a></h4>
-                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                        <div class="pro-actions">
-                            <div class="actions-secondary">
-                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To
-                                    Cart</a>
-                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Content End -->
-                </div>
-                <!-- Single Product End -->
-                <!-- Single Product Start -->
-                <div class="single-product">
-                    <!-- Product Image Start -->
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="primary-img" src="{{ asset('img/products/2.jpg') }}" alt="single-product">
-                            <img class="secondary-img" src="{{ asset('img/products/3.jpg') }}" alt="single-product">
-                        </a>
-                    </div>
-                    <!-- Product Image End -->
-                    <!-- Product Content Start -->
-                    <div class="pro-content">
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4><a href="">Products Name Here</a></h4>
-                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                        <div class="pro-actions">
-                            <div class="actions-secondary">
-                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To
-                                    Cart</a>
-                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Content End -->
-                    <span class="sticker-new">-30%</span>
-                </div>
-                <!-- Single Product End -->
-                <!-- Single Product Start -->
-                <div class="single-product">
-                    <!-- Product Image Start -->
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="primary-img" src="{{ asset('img/products/3.jpg') }}" alt="single-product">
-                            <img class="secondary-img" src="{{ asset('img/products/4.jpg') }}" alt="single-product">
-                        </a>
-                    </div>
-                    <!-- Product Image End -->
-                    <!-- Product Content Start -->
-                    <div class="pro-content">
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4><a href="">Products Name Here</a></h4>
-                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                        <div class="pro-actions">
-                            <div class="actions-secondary">
-                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To
-                                    Cart</a>
-                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Content End -->
-                </div>
-                <!-- Single Product End -->
-                <!-- Single Product Start -->
-                <div class="single-product">
-                    <!-- Product Image Start -->
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="primary-img" src="{{ asset('img/products/4.jpg') }}" alt="single-product">
-                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}" alt="single-product">
-                        </a>
-                    </div>
-                    <!-- Product Image End -->
-                    <!-- Product Content Start -->
-                    <div class="pro-content">
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4><a href="">Products Name Here</a></h4>
-                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                        <div class="pro-actions">
-                            <div class="actions-secondary">
-                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To
-                                    Cart</a>
-                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Content End -->
-                    <span class="sticker-new">-32%</span>
-                </div>
-                <!-- Single Product End -->
-            </div>
-            <!-- Realted Product Activation End -->
-        </div>
-    </div>
-</div>
-<!-- Realted Product End -->
-<!-- Upsell Product Start -->
-<div class="related-product pb-30">
-    <div class="container">
-        <div class="usel-product">
-            <div class="group-title">
-                <h2>upsell product</h2>
-            </div>
-            <!-- Upsell Product Activation Start -->
-            <div class="new-upsell-pro owl-carousel">
-                <!-- Single Product Start -->
-                <div class="single-product">
-                    <!-- Product Image Start -->
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="primary-img" src="{{ asset('img/products/4.jpg') }}" alt="single-product">
-                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}" alt="single-product">
-                        </a>
-                    </div>
-                    <!-- Product Image End -->
-                    <!-- Product Content Start -->
-                    <div class="pro-content">
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4><a href="">Products Name Here</a></h4>
-                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                        <div class="pro-actions">
-                            <div class="actions-secondary">
-                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To
-                                    Cart</a>
-                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Content End -->
-                    <span class="sticker-new">-32%</span>
-                </div>
-                <!-- Single Product End -->
-                <!-- Single Product Start -->
-                <div class="single-product">
-                    <!-- Product Image Start -->
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="primary-img" src="{{ asset('img/products/1.jpg') }}" alt="single-product">
-                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}" alt="single-product">
-                        </a>
-                    </div>
-                    <!-- Product Image End -->
-                    <!-- Product Content Start -->
-                    <div class="pro-content">
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4><a href="">Products Name Here</a></h4>
-                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                        <div class="pro-actions">
-                            <div class="actions-secondary">
-                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To
-                                    Cart</a>
-                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Content End -->
-                </div>
-                <!-- Single Product End -->
-                <!-- Single Product Start -->
-                <div class="single-product">
-                    <!-- Product Image Start -->
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="primary-img" src="{{ asset('img/products/2.jpg') }}" alt="single-product">
-                            <img class="secondary-img" src="{{ asset('img/products/3.jpg') }}" alt="single-product">
-                        </a>
-                    </div>
-                    <!-- Product Image End -->
-                    <!-- Product Content Start -->
-                    <div class="pro-content">
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4><a href="">Products Name Here</a></h4>
-                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                        <div class="pro-actions">
-                            <div class="actions-secondary">
-                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To
-                                    Cart</a>
-                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Content End -->
-                    <span class="sticker-new">-30%</span>
-                </div>
-                <!-- Single Product End -->
-                <!-- Single Product Start -->
-                <div class="single-product">
-                    <!-- Product Image Start -->
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="primary-img" src="{{ asset('img/products/3.jpg') }}" alt="single-product">
-                            <img class="secondary-img" src="{{ asset('img/products/4.jpg') }}" alt="single-product">
-                        </a>
-                    </div>
-                    <!-- Product Image End -->
-                    <!-- Product Content Start -->
-                    <div class="pro-content">
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4><a href="">Products Name Here</a></h4>
-                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                        <div class="pro-actions">
-                            <div class="actions-secondary">
-                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To
-                                    Cart</a>
-                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Content End -->
-                </div>
-                <!-- Single Product End -->
-                <!-- Single Product Start -->
-                <div class="single-product">
-                    <!-- Product Image Start -->
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="primary-img" src="{{ asset('img/products/4.jpg') }}" alt="single-product">
-                            <img class="secondary-img" src="{{ asset('img/products/2.jpg') }}" alt="single-product">
-                        </a>
-                    </div>
-                    <!-- Product Image End -->
-                    <!-- Product Content Start -->
-                    <div class="pro-content">
-                        <div class="product-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h4><a href="">Products Name Here</a></h4>
-                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                        <div class="pro-actions">
-                            <div class="actions-secondary">
-                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To
-                                    Cart</a>
-                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Content End -->
-                    <span class="sticker-new">-32%</span>
-                </div>
-                <!-- Single Product End -->
-            </div>
-            <!-- Upsell Product Activation End -->
-        </div>
-    </div>
-</div>
-<!-- Upsell Product End -->
+
+@include('partials._related-products', ['relatedProducts' => $relatedProducts])
 
 @endsection
