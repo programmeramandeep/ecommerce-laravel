@@ -62,10 +62,3 @@ Route::middleware('auth')->group(function () {
     Route::get('/my-orders', 'OrdersController@index')->name('orders.index');
     Route::get('/my-orders/{order}', 'OrdersController@show')->name('orders.show');
 });
-
-Route::view('/shop', 'pages.shop');
-Route::view('/products', 'pages.products');
-Route::view('/product', 'pages.product');
-Route::view('/cart', 'pages.cart');
-Route::view('/checkout', 'pages.checkout');
-Route::view('/thankyou', 'pages.thankyou');

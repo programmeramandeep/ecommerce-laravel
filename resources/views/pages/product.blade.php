@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', $product->name)
+
 @section('content')
 <!-- Product Thumbnail Start -->
 <div class="main-product-thumbnail pb-60">
@@ -47,7 +49,8 @@
             <!-- Thumbnail Description Start -->
             <div class="col-lg-7">
                 <div class="thubnail-desc fix">
-                    <h3 class="product-header">Products Name Here</h3>
+                    <h3 class="product-header">{{ $product->name }}</h3>
+                    <p class="mt-2">{{ $product->details }}</p>
                     <div class="rating-summary fix mtb-10">
                         <div class="rating f-left">
                             <i class="fa fa-star"></i>
@@ -62,7 +65,8 @@
                         </div>
                     </div>
                     <div class="pro-price mb-10">
-                        <p><span class="price">$30.00</span><del class="prev-price">-32.00</del></p>
+                        <p><span class="price">{{ $product->presentPrice() }}</span><del class="prev-price">-32.00</del>
+                        </p>
                     </div>
                     <div class="pro-ref mb-15">
                         <p><span class="in-stock">IN STOCK</span><span class="sku">50</span></p>
@@ -80,9 +84,7 @@
                             <li><a href="#">Email</a></li>
                         </ul>
                     </div>
-                    <p class="ptb-20">Everything you need for a trip to the gym will fit inside this surprisingly
-                        spacious Products Name Here. Stock it with a water bottle, change of clothes, pair of shoes, and
-                        even a few beauty products. Fits inside a locker and zips shut for security.</p>
+                    <p class="ptb-20">{{ $product->description }}</p>
                 </div>
             </div>
             <!-- Thumbnail Description End -->
