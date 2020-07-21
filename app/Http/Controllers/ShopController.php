@@ -18,7 +18,7 @@ class ShopController extends Controller
     {
         $product = Product::where('slug', $slug)->firstOrFail();
 
-        $relatedProducts = Product::where('slug', '!=', $slug)->inRandomOrder()->take(6)->get();
+        $relatedProducts = Product::where('slug', '!=', $slug)->mightAlsoLike()->get();
 
         return view('pages.product', compact('product', 'relatedProducts'));
     }

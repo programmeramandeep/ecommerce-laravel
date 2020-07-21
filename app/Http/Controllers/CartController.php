@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Cart;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -13,7 +14,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.cart');
     }
 
     /**
@@ -34,7 +35,10 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Cart::add($request->id, $request->name, $request->quantity, $request->price)
+            ->associate('App\Product');
+
+        return redirect()->route('cart.index')->with('success_message', 'Item was added to your cart.');
     }
 
     /**

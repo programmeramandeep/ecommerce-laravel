@@ -87,9 +87,13 @@
                         <p><span class="in-stock">IN STOCK</span><span class="sku">50</span></p>
                     </div>
                     <div class="box-quantity">
-                        <form action="#">
-                            <input class="number" id="numeric" type="number" min="1" value="1">
-                            <a class="">add to cart</a>
+                        <form action="{{ route('cart.store', $product) }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $product->id }}" />
+                            <input type="hidden" name="name" value="{{ $product->name }}" />
+                            <input type="hidden" name="price" value="{{ $product->price }}" />
+                            <input class="number" name="quantity" id="quantity" type="number" min="1" value="1" />
+                            <button type="submit" class="add-cart">Add to Cart</button>
                         </form>
                     </div>
                     <div class="product-link">

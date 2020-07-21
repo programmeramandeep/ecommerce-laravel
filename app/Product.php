@@ -10,4 +10,9 @@ class Product extends Model
     {
         return moneyFormat($this->price, 'INR');
     }
+
+    public function scopeMightAlsoLike($query)
+    {
+        return $query->inRandomOrder()->take(6);
+    }
 }

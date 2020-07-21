@@ -1926,7 +1926,7 @@ ul.ht-dropdown.dropdown-style-two li {
     background: #fff;
     width: 65px;
     padding: 5px;
-    height: 35px;
+    height: auto;
     border: 1px solid #ebebeb;
     margin-right: 15px;
     text-align: center;
@@ -1938,8 +1938,8 @@ ul.ht-dropdown.dropdown-style-two li {
     border-radius: 3px;
     color: #fff;
     display: inline-block;
-    height: 35px;
-    line-height: 36px;
+    height: 36px;
+    line-height: inherit;
     padding: 0 10px;
     text-align: center;
     text-transform: capitalize;

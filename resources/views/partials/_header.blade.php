@@ -98,7 +98,8 @@
                                 </ul>
                             </li>
                             <li><a href=""><i class="fa fa-heart-o"></i></a></li>
-                            <li><a href=""><i class="fa fa-shopping-basket"></i><span class="cart-counter">2</span></a>
+                            <li><a href="{{ route('cart.index') }}"><i class="fa fa-shopping-basket"></i><span
+                                        class="cart-counter">2</span></a>
                                 <ul class="ht-dropdown main-cart-box">
                                     <li>
                                         <!-- Cart Box Start -->
@@ -131,7 +132,7 @@
                                         <div class="cart-footer fix">
                                             <h5>total :<span class="f-right">$698.00</span></h5>
                                             <div class="cart-actions">
-                                                <a class="checkout" href="checkout.html">Checkout</a>
+                                                <a class="checkout" href="{{ route('checkout.index') }}">Checkout</a>
                                             </div>
                                         </div>
                                         <!-- Cart Footer Inner End -->
