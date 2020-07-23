@@ -168,6 +168,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Darryldecode\Cart\CartServiceProvider::class,
         Propaganistas\LaravelPhone\PhoneServiceProvider::class,
+        App\Providers\WishListProvider::class,
 
         /*
          * Application Service Providers...

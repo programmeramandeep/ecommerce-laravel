@@ -1,3 +1,6 @@
+@php
+$cartCollection = Cart::getContent();
+@endphp
 <!-- Header Area Start -->
 <header>
     <!-- Header Top Start -->
@@ -97,46 +100,65 @@
                                     @endguest
                                 </ul>
                             </li>
-                            <li><a href=""><i class="fa fa-heart-o"></i></a></li>
-                            <li><a href="{{ route('cart.index') }}"><i class="fa fa-shopping-basket"></i><span
-                                        class="cart-counter">2</span></a>
+                            <li>
+                                <a href="{{ route('wishlist.index') }}" title="Wishlist">
+                                    <i class="fa fa-heart-o"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('cart.index') }}">
+                                    <i class="fa fa-shopping-basket"></i>
+                                    <span class="cart-counter">{{ $cartCollection->count() }}</span>
+                                </a>
+
                                 <ul class="ht-dropdown main-cart-box">
+                                    @if (Cart::isEmpty())
+                                    <h6 class="text-capitalize">No items in Cart!</h6>
+                                    @else
                                     <li>
+                                        @foreach ($cartCollection as $item)
                                         <!-- Cart Box Start -->
                                         <div class="single-cart-box">
                                             <div class="cart-img">
-                                                <a href=""><img src="{{ asset('img/menu/1.jpg') }}"
-                                                        alt="cart-image"></a>
+                                                <a href="{{ route('shop.show', $item->model->slug) }}">
+                                                    <img src="{{ asset('img/products/'.$item->model->slug.'.jpg') }}"
+                                                        alt="cart-image">
+                                                </a>
                                             </div>
                                             <div class="cart-content">
-                                                <h6><a href="product.html">Products Name</a></h6>
-                                                <span>1 × $399.00</span>
+                                                <h6><a href="{{ route('shop.show', $item->model->slug) }}">
+                                                        {{$item->model->name}}
+                                                    </a>
+                                                </h6>
+                                                <span>{{ $item->quantity }} × {{ $item->model->presentPrice() }}</span>
                                             </div>
-                                            <a class="del-icone" href=""><i class="fa fa-window-close-o"></i></a>
+                                            <a href="javascript:void(0);" class="del-icone"
+                                                onclick="event.preventDefault(); document.getElementById('cart-item-remove-{{ $item->id }}').submit();">
+                                                <i class="fa fa-window-close-o"></i>
+                                            </a>
+
+                                            <form id="cart-item-remove-{{ $item->id }}"
+                                                action="{{ route('cart.destroy', $item->id) }}" method="POST"
+                                                class="d-none">
+                                                @csrf
+                                                @method('DELETE')
+                                            </form>
                                         </div>
                                         <!-- Cart Box End -->
-                                        <!-- Cart Box Start -->
-                                        <div class="single-cart-box">
-                                            <div class="cart-img">
-                                                <a href=""><img src="{{ asset('img/menu/2.jpg') }}"
-                                                        alt="cart-image"></a>
-                                            </div>
-                                            <div class="cart-content">
-                                                <h6><a href="product.html">Products Name</a></h6>
-                                                <span>2 × $299.00</span>
-                                            </div>
-                                            <a class="del-icone" href=""><i class="fa fa-window-close-o"></i></a>
-                                        </div>
-                                        <!-- Cart Box End -->
+                                        @endforeach
+
                                         <!-- Cart Footer Inner Start -->
                                         <div class="cart-footer fix">
-                                            <h5>total :<span class="f-right">$698.00</span></h5>
+                                            <h5>total :<span
+                                                    class="f-right">{{ moneyFormat(Cart::getTotal(), 'INR') }}</span>
+                                            </h5>
                                             <div class="cart-actions">
                                                 <a class="checkout" href="{{ route('checkout.index') }}">Checkout</a>
                                             </div>
                                         </div>
                                         <!-- Cart Footer Inner End -->
                                     </li>
+                                    @endif
                                 </ul>
                             </li>
                         </ul>

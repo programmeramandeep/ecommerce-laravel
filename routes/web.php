@@ -21,15 +21,10 @@ Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
 // Cart routes
-Route::get('/cart', 'CartController@index')->name('cart.index');
-Route::post('/cart/{product}', 'CartController@store')->name('cart.store');
-Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
-Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
-Route::post('/cart/switchToSaveForLater/{product}', 'CartController@switchToSaveForLater')->name('cart.switchToSaveForLater');
+Route::resource('cart', 'CartController');
 
 // Wishlist routes
-Route::delete('/saveForLater/{product}', 'SaveForLaterController@destroy')->name('saveForLater.destroy');
-Route::post('/saveForLater/switchToCart/{product}', 'SaveForLaterController@switchToCart')->name('saveForLater.switchToCart');
+Route::resource('wishlist', 'WishListController');
 
 // Coupon routes
 Route::post('/coupon', 'CouponsController@store')->name('coupon.store');

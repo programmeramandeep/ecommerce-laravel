@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Cart;
+use Darryldecode\Cart\CartCondition;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -14,17 +15,15 @@ class CartController extends Controller
      */
     public function index()
     {
-        return view('pages.cart');
-    }
+        $cartCollection = Cart::getContent();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $taxCondition = Cart::getCondition('VAT 18%');
+        if ($taxCondition !== null) {
+            $totalTax = (str_replace('%', '', $taxCondition->getValue()) / 100) * Cart::getSubTotal();
+        } else {
+            $totalTax = '';
+        }
+        return view('pages.cart', compact('cartCollection', 'totalTax', 'taxCondition'));
     }
 
     /**
@@ -35,32 +34,24 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        Cart::add($request->id, $request->name, $request->quantity, $request->price)
+        $duplicate = Cart::get($request->id);
+
+        if ($duplicate) {
+            return redirect()->route('cart.index')->with('error', 'Item is already in your cart!');
+        }
+
+        Cart::add($request->id, $request->name, $request->price, $request->quantity)
             ->associate('App\Product');
 
-        return redirect()->route('cart.index')->with('success_message', 'Item was added to your cart.');
-    }
+        $condition = new CartCondition(array(
+            'name' => 'VAT 18%',
+            'type' => 'tax',
+            'target' => 'total',
+            'value' => '18%',
+        ));
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        Cart::condition($condition);
+        return redirect()->route('cart.index')->with('success', 'Item was added to your cart.');
     }
 
     /**
@@ -83,6 +74,7 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cart::remove($id);
+        return back()->with('success', 'Item has been removed!');
     }
 }
