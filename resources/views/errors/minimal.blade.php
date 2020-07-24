@@ -30,9 +30,6 @@
         {{-- Header --}}
         @include('partials/_header')
 
-        {{-- Breadcrumd --}}
-        @include('partials/_breadcrumb')
-
         {{-- Main Content --}}
         <main>
             <div class="error404-area pb-60 pt-20">

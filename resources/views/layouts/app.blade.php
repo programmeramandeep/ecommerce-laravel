@@ -14,9 +14,6 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" async></script>
-
     <!-- place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/icon/favicon.png') }}" />
 
@@ -25,6 +22,8 @@
 
     {{-- Styles --}}
     @include('partials/_stylesheets')
+
+    @stack('extra_css')
 </head>
 
 <body>
@@ -46,6 +45,8 @@
 
     {{-- Scripts --}}
     @include('partials/_scripts')
+
+    @stack('extra_js')
 </body>
 
 </html>

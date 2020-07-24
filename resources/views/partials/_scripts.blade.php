@@ -1,3 +1,5 @@
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
 <!-- jquery 3.12.4 -->
 <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
 <!-- mobile menu js  -->

@@ -35,7 +35,7 @@
 /* 1. Theme Default CSS
 /*----------------------------------------*/
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     color: #333;
     font-size: 14px;
@@ -315,7 +315,6 @@ input#newsletter-permission {
 .megamenu-three-column>ul>li ul>li:hover>a,
 .catergorie-product .single-product .pro-content h4 a:hover,
 .cat-list li a:hover,
-
 .middle-menu-list>li>ul.ht-dropdown li:hover>a {
     color: #f1ac06;
 }
@@ -860,8 +859,6 @@ ul.ht-dropdown.dropdown-style-two li {
     display: none;
 }
 
-
-
 .best-seller-product .group-title {
     margin-bottom: 4px;
 }
@@ -936,7 +933,7 @@ ul.ht-dropdown.dropdown-style-two li {
     line-height: 20px;
 }
 
-.product-rating i:nth-child(n+4) {
+.product-rating i:nth-child(n + 4) {
     color: #444;
 }
 
@@ -1323,7 +1320,6 @@ ul.ht-dropdown.dropdown-style-two li {
 
 .brand-banner {
     border: 1px solid #ddd;
-
 }
 
 .brand-banner.owl-carousel .single-brand {
@@ -1562,7 +1558,6 @@ ul.ht-dropdown.dropdown-style-two li {
 .single-sidebar {
     border: 1px solid #ddd;
     padding: 20px;
-
 }
 
 .single-sidebar .group-title {
@@ -1728,7 +1723,7 @@ ul.ht-dropdown.dropdown-style-two li {
 }
 
 .color-option li a:hover {
-    outline: 1px solid #FF5216;
+    outline: 1px solid #ff5216;
 }
 
 .color-option li {
@@ -1966,7 +1961,7 @@ ul.ht-dropdown.dropdown-style-two li {
     background-color: #e3e3e3;
     border: 1px solid #e3e3e3;
     color: #333;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     padding: 13px 15px;
     font-size: 14px;
@@ -2372,7 +2367,7 @@ a.shipping-calculator-button {
 }
 
 a.shipping-calculator-button:hover {
-    color: #83CBDC
+    color: #83cbdc;
 }
 
 .cart_totals table tr.order-total th,
@@ -2478,7 +2473,7 @@ a.shipping-calculator-button:hover {
     color: #777;
     content: "\f0f6";
     display: inline-block;
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
     left: 16px;
     position: absolute;
     top: 16px;
@@ -2487,8 +2482,8 @@ a.shipping-calculator-button:hover {
 .coupon-accordion span {
     cursor: pointer;
     color: #6f6f6f;
-    -webkit-transition: .3s;
-    transition: .3s
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .coupon-accordion span:hover,
@@ -2504,11 +2499,11 @@ p.lost-password a:hover {
 }
 
 .coupon-info p.coupon-text {
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 .coupon-info p {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .coupon-info p.form-row-first label,
@@ -2531,8 +2526,8 @@ p.lost-password a:hover {
     max-width: 100%;
     padding: 0 0 0 10px;
     width: 370px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .coupon-info p.form-row input[type="submit"]:hover,
@@ -2560,7 +2555,7 @@ p.lost-password a {
     font-size: 12px;
 }
 
-p.checkout-coupon input[type=text] {
+p.checkout-coupon input[type="text"] {
     height: 36px;
     padding-left: 10px;
     width: 170px;
@@ -2612,7 +2607,7 @@ p.checkout-coupon input[type="submit"] {
 
 .country-select label span.required,
 .checkout-form-list label span.required {
-    color: #f1ac06
+    color: #f1ac06;
 }
 
 .country-select select {
@@ -2624,25 +2619,25 @@ p.checkout-coupon input[type="submit"] {
     -moz-appearance: none;
     appearance: none;
     background: #fff;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .checkout-form-list label {
     color: #333;
 }
 
-.checkout-form-list input[type=text],
-.checkout-form-list input[type=password],
-.checkout-form-list input[type=email] {
+.checkout-form-list input[type="text"],
+.checkout-form-list input[type="password"],
+.checkout-form-list input[type="email"] {
     background: #fff none repeat scroll 0 0;
     border: 1px solid #ebebeb;
     border-radius: 0;
     height: 34px;
     width: 100%;
     padding: 0 0 0 10px;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .checkout-form-list input[type="checkbox"] {
@@ -2660,7 +2655,7 @@ p.checkout-coupon input[type="submit"] {
 }
 
 .create-accounts {
-    display: none
+    display: none;
 }
 
 .ship-different-title h3 label {
@@ -2681,7 +2676,7 @@ p.checkout-coupon input[type="submit"] {
 }
 
 #ship-box-info {
-    display: none
+    display: none;
 }
 
 .your-order {
@@ -2743,7 +2738,7 @@ p.checkout-coupon input[type="submit"] {
 }
 
 .your-order-table table tr.cart_item:hover {
-    background: #F9F9F9
+    background: #f9f9f9;
 }
 
 .your-order-table table tr.order-total td span {
@@ -2767,7 +2762,7 @@ p.checkout-coupon input[type="submit"] {
     padding-left: 25px;
     position: relative;
     text-transform: capitalize;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .payment-accordion h3 a:before,
@@ -2811,7 +2806,7 @@ p.checkout-coupon input[type="submit"] {
 }
 
 .order-button-payment input:hover {
-    background: #444
+    background: #444;
 }
 
 .sub-heading {
@@ -2851,7 +2846,6 @@ p.checkout-coupon input[type="submit"] {
 
 .blog-meta ul li span {
     color: #363f4d;
-
 }
 
 .blog-title {
@@ -3266,7 +3260,7 @@ p.checkout-coupon input[type="submit"] {
 .categorie-list>li {
     border-bottom: 1px solid #dddddd;
     margin-bottom: 12px;
-    padding-bottom: 12px
+    padding-bottom: 12px;
 }
 
 .categorie-list li:last-child {
@@ -3450,8 +3444,8 @@ p.checkout-coupon input[type="submit"] {
     margin-top: 53px;
     padding: 0 30px;
     text-transform: uppercase;
-    -webkit-transition: .3s;
-    transition: .3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .error-button a:hover {
@@ -3771,7 +3765,6 @@ legend {
     text-transform: capitalize;
     display: inline-block;
     font-size: 13px;
-
 }
 
 .compare-details h4 {
@@ -4003,7 +3996,6 @@ legend {
     text-transform: capitalize;
 }
 
-
 .view-cart {
     display: inline-block;
     font-size: 13px;
@@ -4042,8 +4034,8 @@ legend {
     content: "\f105";
     font-family: FontAwesome;
     margin-left: 5px;
-    -webkit-transition: 0.10s;
-    transition: 0.10s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
 }
 
 .dashboard-list li a:hover,
@@ -4233,4 +4225,41 @@ legend {
 
 .mobile-menu nav ul {
     display: none;
+}
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+.StripeElement {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    width: 100%;
+    margin: 0.5rem 0;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+    border: 1px solid #ced4da;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+    border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}
+
+.order-button-payment input:disabled {
+    cursor: not-allowed !important;
+    background: grey !important;
 }

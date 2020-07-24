@@ -6,5 +6,12 @@ use Illuminate\Http\Request;
 
 class ConfirmationController extends Controller
 {
-    //
+    public function index()
+    {
+        if (!session('success')) {
+            return redirect('/');
+        }
+
+        return view('pages.thankyou');
+    }
 }
