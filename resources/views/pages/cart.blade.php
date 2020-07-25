@@ -25,7 +25,7 @@
         <h2 class="text-capitalize sub-heading">No items in Cart!</h2>
         <a href="{{ route('shop.index') }}" class="btn btn-warning">Continue Shopping</a>
         @else
-        <h2 class="text-capitalize sub-heading">{{ $cartCollection->count() }} item(s) in Shopping Cart</h2>
+        <h2 class="text-capitalize sub-heading">{{ Cart::getTotalQuantity() }} item(s) in Shopping Cart</h2>
         <div class="row">
             <div class="col-md-12">
                 <!-- Table Content Start -->
@@ -55,9 +55,12 @@
                                 </td>
                                 <td class="product-price"><span class="amount">{{ $item->model->presentPrice() }}</span>
                                 </td>
-                                <td class="product-quantity"><input type="number" value="{{ $item->quantity }}" /></td>
+                                <td class="product-quantity">
+                                    <input type="number" class="quantity" value="{{ $item->quantity }}"
+                                        data-id="{{ $item->id }}" min="1" max="999" />
+                                </td>
                                 <td class="product-subtotal">
-                                    {{ moneyformat(($item->quantity * $item->model->price), 'INR') }}
+                                    {{ moneyformat(Cart::get($item->id)->getPriceSum(), 'INR') }}
                                 </td>
                                 <td class="product-wishlist">
                                     <a href="javascript:void(0);"
@@ -145,3 +148,29 @@
 <!-- Cart Main Area End -->
 
 @endsection
+
+@push('extra_js')
+<script>
+    (function() {
+        const classname = document.querySelectorAll('.quantity');
+
+        Array.from(classname).forEach(function(element) {
+            element.addEventListener('change', function() {
+                const id = element.getAttribute('data-id');
+
+                axios.patch(`/cart/${id}`, {
+                    quantity: this.value,
+                })
+                .then(function(response) {
+                    window.location.href = '{{ route('cart.index') }}';
+                })
+                .catch(function(error) {
+                    console.error(error);
+                    window.location.href = '{{ route('cart.index') }}';
+                })
+            })
+        });
+
+    })();
+</script>
+@endpush

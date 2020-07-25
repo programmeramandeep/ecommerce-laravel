@@ -21,6 +21,9 @@
 <!-- Product Thumbnail Start -->
 <div class="main-product-thumbnail pb-60">
     <div class="container">
+        {{-- Messages --}}
+        @include('partials._messages')
+
         <div class="row">
             <!-- Main Thumbnail Image Start -->
             <div class="col-lg-5">

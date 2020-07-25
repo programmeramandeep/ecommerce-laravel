@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Cart;
 use Darryldecode\Cart\CartCondition;
 use Illuminate\Http\Request;
+use Validator;
 
 class CartController extends Controller
 {
@@ -17,12 +18,12 @@ class CartController extends Controller
     {
         $cartCollection = Cart::getContent();
 
+        $totalTax = 0;
         $taxCondition = Cart::getCondition('VAT 18%');
         if ($taxCondition !== null) {
-            $totalTax = (str_replace('%', '', $taxCondition->getValue()) / 100) * Cart::getSubTotal();
-        } else {
-            $totalTax = '';
+            $totalTax = $taxCondition->getCalculatedValue(Cart::getSubTotal());
         }
+
         return view('pages.cart', compact('cartCollection', 'totalTax', 'taxCondition'));
     }
 
@@ -38,6 +39,14 @@ class CartController extends Controller
 
         if ($duplicate) {
             return redirect()->route('cart.index')->with('error', 'Item is already in your cart!');
+        }
+
+        $validator = Validator::make($request->all(), [
+            'quantity' => 'required|numeric|between:1,10'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->with('errors', $validator->errors());
         }
 
         Cart::add($request->id, $request->name, $request->price, $request->quantity)
@@ -63,7 +72,24 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'quantity' => 'required|numeric|between:1,10'
+        ]);
+
+        if ($validator->fails()) {
+            session()->flash('errors', $validator->errors());
+            return response()->json(['success' => false], 400);
+        }
+
+        Cart::update($id, [
+            'quantity' => array(
+                'relative' => false,
+                'value' => $request->quantity
+            )
+        ]);
+
+        session()->flash('success', 'Quantity has been updated successfully');
+        return response()->json(['success' => true]);
     }
 
     /**

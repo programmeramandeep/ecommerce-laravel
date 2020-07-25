@@ -592,7 +592,8 @@
                                 </div>
                                 <div class="order-button-payment">
                                     <input type="submit" id="complete-order" value="Place order"
-                                        @if(Cart::getContent()->count() === 0) disabled @endif />
+                                        @if(Cart::getContent()->count() === 0 || Cart::getTotal() == 0) disabled @endif
+                                    />
                                 </div>
                             </div>
                         </div>
