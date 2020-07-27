@@ -121,8 +121,7 @@ $cartCollection = Cart::getContent();
                                         <div class="single-cart-box">
                                             <div class="cart-img">
                                                 <a href="{{ route('shop.show', $item->model->slug) }}">
-                                                    <img src="{{ asset('img/products/'.$item->model->slug.'.jpg') }}"
-                                                        alt="cart-image">
+                                                    <img src="{{ asset('img/'.$item->model->image) }}" alt="cart-image">
                                                 </a>
                                             </div>
                                             <div class="cart-content">

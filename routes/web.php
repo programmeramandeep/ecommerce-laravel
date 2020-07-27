@@ -17,21 +17,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'LandingPageController@index')->name('landing-name');
 
 // Shop routes
-Route::get('/shop', 'ShopController@index')->name('shop.index');
-Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
+Route::resource('shop', 'ShopController')->only(['index', 'show']);
 
 // Cart routes
-Route::resource('cart', 'CartController');
+Route::resource('cart', 'CartController')->except(['create', 'edit', 'show']);
 
 // Wishlist routes
-Route::resource('wishlist', 'WishListController');
+Route::resource('wishlist', 'WishListController')->only(['index', 'store', 'update', 'destroy']);
 
 // Coupon routes
-Route::post('/coupon', 'CouponsController@store')->name('coupon.store');
-Route::delete('/coupon', 'CouponsController@destroy')->name('coupon.destroy');
+Route::resource('coupon', 'CouponsController')->only(['store', 'destroy']);
 
 // Checkout routes
-Route::resource('checkout', 'CheckoutController');
+Route::resource('checkout', 'CheckoutController')->only(['index', 'store'])->middleware('auth');
 Route::post('/paypal-checkout', 'CheckoutController@paypalCheckout')->name('checkout.paypal');
 Route::get('/guestCheckout', 'CheckoutController@index')->name('guestCheckout.index');
 

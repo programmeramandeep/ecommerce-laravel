@@ -30,20 +30,24 @@
                 <!-- Thumbnail Large Image start -->
                 <div class="tab-content">
                     <div id="thumb1" class="tab-pane active">
-                        <a data-fancybox="images" href="{{ asset('img/products/'.$product->slug.'.jpg') }}"><img
-                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-view"></a>
+                        <a data-fancybox="images" href="{{ asset('img/'.$product->image) }}">
+                            <img src="{{ asset('img/'.$product->image) }}" alt="product-view">
+                        </a>
                     </div>
                     <div id="thumb2" class="tab-pane">
-                        <a data-fancybox="images" href="{{ asset('img/products/'.$product->slug.'.jpg') }}"><img
-                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-view"></a>
+                        <a data-fancybox="images" href="{{ asset('img/'.$product->image) }}">
+                            <img src="{{ asset('img/'.$product->image) }}" alt="product-view">
+                        </a>
                     </div>
                     <div id="thumb3" class="tab-pane">
-                        <a data-fancybox="images" href="{{ asset('img/products/'.$product->slug.'.jpg') }}"><img
-                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-view"></a>
+                        <a data-fancybox="images" href="{{ asset('img/'.$product->image) }}">
+                            <img src="{{ asset('img/'.$product->image) }}" alt="product-view">
+                        </a>
                     </div>
                     <div id="thumb4" class="tab-pane">
-                        <a data-fancybox="images" href="{{ asset('img/products/'.$product->slug.'.jpg') }}"><img
-                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-view"></a>
+                        <a data-fancybox="images" href="{{ asset('img/'.$product->image) }}">
+                            <img src="{{ asset('img/'.$product->image) }}" alt="product-view">
+                        </a>
                     </div>
                 </div>
                 <!-- Thumbnail Large Image End -->
@@ -52,13 +56,13 @@
                 <div class="product-thumbnail">
                     <div class="thumb-menu nav">
                         <a class="active" data-toggle="tab" href="#thumb1"> <img
-                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-thumbnail"></a>
-                        <a data-toggle="tab" href="#thumb2"> <img
-                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-thumbnail"></a>
-                        <a data-toggle="tab" href="#thumb3"> <img
-                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-thumbnail"></a>
-                        <a data-toggle="tab" href="#thumb4"> <img
-                                src="{{ asset('img/products/'.$product->slug.'.jpg') }}" alt="product-thumbnail"></a>
+                                src="{{ asset('img/'.$product->image) }}" alt="product-thumbnail"></a>
+                        <a data-toggle="tab" href="#thumb2"> <img src="{{ asset('img/'.$product->image) }}"
+                                alt="product-thumbnail"></a>
+                        <a data-toggle="tab" href="#thumb3"> <img src="{{ asset('img/'.$product->image) }}"
+                                alt="product-thumbnail"></a>
+                        <a data-toggle="tab" href="#thumb4"> <img src="{{ asset('img/'.$product->image) }}"
+                                alt="product-thumbnail"></a>
                     </div>
                 </div>
                 <!-- Thumbnail image end -->
