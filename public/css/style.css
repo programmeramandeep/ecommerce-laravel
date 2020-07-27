@@ -1630,7 +1630,8 @@ ul.ht-dropdown.dropdown-style-two li {
     transition: all 0.3s;
 }
 
-.sidebar li a:hover {
+.sidebar li a:hover,
+.sidebar li a.active {
     color: #f1ac06;
 }
 
@@ -2925,10 +2926,11 @@ p.checkout-coupon input[type="submit"] {
     margin-right: 1px;
 }
 
-.blog-pagination li a {
+.blog-pagination li a,
+.blog-pagination li span {
     display: block;
     font-size: 16px;
-    color: 808080;
+    color: #808080;
     border: 1px solid #e7e7e7;
     width: 40px;
     text-align: center;
@@ -2937,8 +2939,17 @@ p.checkout-coupon input[type="submit"] {
     background: #fff;
 }
 
+.blog-pagination li.disbaled a,
+.blog-pagination li.disabled span {
+    color: #000;
+    background: lightgray;
+    cursor: not-allowed;
+}
+
 .blog-pagination li.active a,
-.blog-pagination li a:hover {
+.blog-pagination li a:hover,
+.blog-pagination li.active span,
+.blog-pagination li span:hover {
     background: #f1ac06;
     color: #fff;
 }

@@ -90,10 +90,8 @@
                 <!-- Product Image Start -->
                 <div class="pro-img">
                     <a href="{{ route('shop.show', $product->slug) }}">
-                        <img class="primary-img" src="{{ asset('img/products/'.$product->slug.'.jpg') }}"
-                            alt="single-product">
-                        <img class="secondary-img" src="{{ asset('img/products/'.$product->slug.'.jpg') }}"
-                            alt="single-product">
+                        <img class="primary-img" src="{{ asset('img/'.$product->image) }}" alt="single-product">
+                        <img class="secondary-img" src="{{ asset('img/'.$product->image) }}" alt="single-product">
                     </a>
                 </div>
                 <!-- Product Image End -->

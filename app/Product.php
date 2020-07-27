@@ -6,18 +6,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
- public function presentPrice()
- {
-  return moneyFormat($this->price, 'INR');
- }
+	protected $fillable = [
+		'name', 'slug', 'details', 'price', 'description', 'featured', 'quantity', 'image', 'images'
+	];
 
- public function scopeMightAlsoLike($query)
- {
-  return $query->inRandomOrder()->take(6);
- }
+	public function presentPrice()
+	{
+		return moneyFormat($this->price, 'INR');
+	}
 
- public function categories()
- {
-  return $this->belongsToMany(Category::class)->withTimestamps();
- }
+	public function scopeMightAlsoLike($query)
+	{
+		return $query->inRandomOrder()->take(6);
+	}
+
+	public function categories()
+	{
+		return $this->belongsToMany(Category::class)->withTimestamps();
+	}
 }
