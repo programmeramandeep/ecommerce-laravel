@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+	protected $table = 'category';
+
 	protected $_guarded = [];
 
 	public function products()

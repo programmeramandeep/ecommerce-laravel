@@ -55,3 +55,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/my-orders', 'OrdersController@index')->name('orders.index');
     Route::get('/my-orders/{order}', 'OrdersController@show')->name('orders.show');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
