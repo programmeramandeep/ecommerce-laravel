@@ -47,8 +47,7 @@
                             <tr>
                                 <td class="product-thumbnail">
                                     <a href="{{ route('shop.show', $item->model->slug) }}"><img
-                                            src="{{ asset('img/products/'.$item->model->slug.'.jpg') }}"
-                                            alt="cart-image" /></a>
+                                            src="{{ asset('img/'.$item->model->image) }}" alt="cart-image" /></a>
                                 </td>
                                 <td class="product-name"><a
                                         href="{{ route('shop.show', $item->model->slug) }}">{{ $item->model->name }}</a>
@@ -110,14 +109,22 @@
                             <br />
                             <table>
                                 <tbody>
+                                    @foreach (Cart::getConditions() as $item)
+                                    <tr>
+                                        <th>
+                                            {{ ucfirst($item->getType()) }} ({{ $item->getName() }})
+                                        </th>
+                                        <td>
+                                            <span class="amount">
+                                                {{ ($item->getType() != 'tax' ? '-' : '') . moneyformat($item->getCalculatedValue(Cart::getSubTotal()), 'INR') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    @endforeach
                                     <tr class="cart-subtotal">
                                         <th>Subtotal</th>
                                         <td><span class="amount">{{ moneyformat(Cart::getSubTotal(), 'INR') }}</span>
                                         </td>
-                                    </tr>
-                                    <tr class="cart-subtotal">
-                                        <th>{{ $taxCondition->getName() }}</th>
-                                        <td><span class="amount">{{ moneyformat($totalTax, 'INR') }}</span></td>
                                     </tr>
                                     <tr class="order-total">
                                         <th>Total</th>

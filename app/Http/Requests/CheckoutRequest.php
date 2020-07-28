@@ -35,8 +35,6 @@ class CheckoutRequest extends FormRequest
             'country' => 'required|string|max:100',
             'postalcode' => 'required|string|max:15',
             'phone' => 'required|phone:IN|exists:users,phone',
-            'new-acccount' => 'nullable|bool',
-            'new-password' => 'exclude_unless:new-account,true|required|alpha_num|min:8|max:255',
             'new-shipping-address' => 'nullable|bool',
             'new-firstname' => 'exclude_unless:new-shipping-address,true|required|string|max:100',
             'new-lastname' => 'exclude_unless:new-shipping-address,true|required|string|max:100',

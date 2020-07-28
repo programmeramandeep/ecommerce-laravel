@@ -11,12 +11,12 @@ class Coupon extends Model
         return self::where('code', $code)->first();
     }
 
-    public function discount($total)
+    public function discount()
     {
         if ($this->type == 'fixed') {
-            return $this->value;
+            return '-' . $this->value;
         } elseif ($this->type == 'percent') {
-            return ($this->percent_off / 100) * $total;
+            return '-' . $this->percent_off . '%';
         } else {
             return 0;
         }

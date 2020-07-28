@@ -25,14 +25,11 @@ class CheckoutController extends Controller
     {
         $cartCollection = Cart::getContent();
 
-        $taxCondition = Cart::getCondition('VAT 18%');
-        if ($taxCondition !== null) {
-            $totalTax = (str_replace('%', '', $taxCondition->getValue()) / 100) * Cart::getSubTotal();
-        } else {
-            $totalTax = '';
+        if ($cartCollection->count() == 0) {
+            return redirect()->route('shop.index');
         }
 
-        return view('pages.checkout', compact('cartCollection', 'totalTax', 'taxCondition'));
+        return view('pages.checkout', compact('cartCollection'));
     }
 
     /**
@@ -48,6 +45,12 @@ class CheckoutController extends Controller
                 return $item->model->slug . ', ' . $item->quantity;
             })->values()->toJson();
 
+            $discounts = Cart::getConditions()->map(function ($item) {
+                if ($item->getType() != 'tax') {
+                    return $item->getName() . ', ' . $item->getValue();
+                }
+            })->values()->toJson();
+
             // Set your secret key. Remember to switch to your live secret key in production!
             // See your keys here: https://dashboard.stripe.com/account/apikeys
             Stripe::setApiKey(config('services.stripe.secret_key'));
@@ -59,12 +62,19 @@ class CheckoutController extends Controller
                 'receipt_email' => $request['new-email'],
                 'metadata' => [
                     'content' => $contents,
-                    'quantity' => Cart::getContent()->count()
+                    'quantity' => Cart::getContent()->count(),
+                    'discount' => $discounts,
                 ],
             ]);
 
-            // Clear cart
+            /**
+             * Clears cart,
+             */
             Cart::clear();
+            /**
+             * Clears all conditions on a cart,
+             */
+            Cart::clearCartConditions();
 
             return redirect('thankyou')->with('success', 'Thankyou! Your payment has been successfully accepted!');
         } catch (CardException $e) {

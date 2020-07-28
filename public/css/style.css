@@ -2578,7 +2578,6 @@ p.checkout-coupon input[type="submit"] {
 
 .coupon-checkout-content {
     margin-bottom: 30px;
-    display: none;
 }
 
 .checkbox-form h3 {
@@ -2732,6 +2731,15 @@ p.checkout-coupon input[type="submit"] {
 .your-order-table table .order-total th {
     border-bottom: medium none;
     font-size: 18px;
+}
+
+.your-order-table table .cart-subtotal th {
+    font-size: 18px;
+}
+
+.your-order-table table .cart-subtotal td .amount {
+    font-size: 20px;
+    color: #f1ac06
 }
 
 .your-order-table table .order-total td {

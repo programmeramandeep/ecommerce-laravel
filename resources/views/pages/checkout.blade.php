@@ -33,81 +33,17 @@
             <div class="col-lg-12">
                 <div class="coupon-accordion">
                     <!-- ACCORDION START -->
-                    <h3>Returning customer? <span id="showlogin">Click here to login</span></h3>
-                    <div id="checkout-login" class="coupon-content">
-                        <div class="coupon-info col-md-6 pl-0">
-                            <p class="coupon-text">Login to your account</p>
-                            <form method="POST" action="{{ route('login') }}">
-                                @csrf
-                                <div class="form-group">
-                                    <label for="email" class="control-label">{{ __('E-Mail Address') }}</label>
-
-                                    <input id="email" type="email"
-                                        class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}" placeholder="Enter your email address here..."
-                                        required autocomplete="email" />
-
-                                    @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label for="password" class="control-label">{{ __('Password') }}</label>
-
-                                    <input id="password" type="password"
-                                        class="form-control @error('password') is-invalid @enderror" name="password"
-                                        placeholder="Enter your password here..." required
-                                        autocomplete="current-password">
-
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-
-                                <div class="form-group row">
-                                    <div class="col-md-6">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="remember"
-                                                id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                            <label class="control-label m-0" for="remember">
-                                                {{ __('Remember Me') }}
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    @if (Route::has('password.request'))
-                                    <div class="col-md-6 text-right">
-                                        <p class="lost-password m-0">
-                                            <a href="{{ route('password.request') }}">
-                                                {{ __('Forgot Your Password?') }}
-                                            </a>
-                                        </p>
-                                    </div>
-                                    @endif
-                                </div>
-
-                                <button type="submit" class="return-customer-btn">
-                                    {{ __('Login') }}
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- ACCORDION END -->
-                    <!-- ACCORDION START -->
-                    <h3>Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3>
+                    <h3>Have a coupon?</h3>
                     <div id="checkout_coupon" class="coupon-checkout-content">
                         <div class="coupon-info">
-                            {{-- <form action="#">
+                            <form action="{{ route('coupon.store') }}" method="POST">
+                                @csrf
                                 <p class="checkout-coupon">
-                                    <input type="text" class="code" placeholder="Coupon code" />
+                                    <input type="text" class="code" placeholder="Coupon code" id="coupon_code"
+                                        name="coupon_code" value="{{ old('coupon_code') }}" required />
                                     <input type="submit" value="Apply Coupon" />
                                 </p>
-                            </form> --}}
+                            </form>
                         </div>
                     </div>
                     <!-- ACCORDION END -->
@@ -288,20 +224,6 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="checkout-form-list create-acc ml-20 mb-30">
-                                    <input class="form-check-input" type="checkbox" id="cbox" name="new-acccount"
-                                        value="true" {{ (! empty(old('new-account')) ? 'checked' : '') }}>
-                                    <label>Create an account?</label>
-                                </div>
-                                <div id="cbox_info" class="checkout-form-list create-accounts mb-25">
-                                    <p class="mb-10">Create an account by entering the information below. If you are a
-                                        returning customer please login at the top of the page.</p>
-                                    <label>Account password <span class="required">*</span></label>
-                                    <input type="password" id="new-password" name="new-password"
-                                        placeholder="password" />
-                                </div>
-                            </div>
                         </div>
                         <div class="different-address">
                             <div class="ship-different-title">
@@ -320,8 +242,8 @@
                                                     class="required">*</span></label>
                                             <input id="new-firstname" type="text"
                                                 class="form-control @error('new-firstname') is-invalid @enderror"
-                                                name="new-firstname" value="{{ old('new-firstname') }}" required
-                                                autocomplete="new-firstname" autofocus />
+                                                name="new-firstname" value="{{ old('new-firstname') }}"
+                                                autocomplete="new-firstname" />
 
                                             @error('new-firstname')
                                             <span class="invalid-feedback" role="alert">
@@ -335,7 +257,7 @@
                                             <label for="new-lastname">Last Name <span class="required">*</span></label>
                                             <input id="new-lastname" type="text"
                                                 class="form-control @error('new-lastname') is-invalid @enderror"
-                                                name="new-lastname" value="{{ old('new-lastname') }}" required
+                                                name="new-lastname" value="{{ old('new-lastname') }}"
                                                 autocomplete="new-lastname" />
 
                                             @error('new-lastname')
@@ -350,7 +272,7 @@
                                             <label for="new-email">Email <span class="required">*</span></label>
                                             <input type="new-email" name="new-email" id="new-email"
                                                 class="form-control @error('new-email') is_invalid @enderror"
-                                                value="{{ old('new-email') }}" required autocomplete="new-email" />
+                                                value="{{ old('new-email') }}" autocomplete="new-email" />
 
                                             @error('new-email')
                                             <div class="invalid-feedback" role="alert">
@@ -364,7 +286,7 @@
                                             <label>Company Name</label>
                                             <input id="new-company" type="text"
                                                 class="form-control @error('new-company') is-invalid @enderror"
-                                                name="new-company" value="{{ old('new-company') }}" required
+                                                name="new-company" value="{{ old('new-company') }}"
                                                 autocomplete="new-company" />
 
                                             @error('new-company')
@@ -379,7 +301,7 @@
                                             <label>Address <span class="required">*</span></label>
                                             <input id="new-address-line1" type="text"
                                                 class="form-control @error('new-address-line1') is-invalid @enderror"
-                                                name="new-address-line1" value="{{ old('new-address-line1') }}" required
+                                                name="new-address-line1" value="{{ old('new-address-line1') }}"
                                                 placeholder="Street address" autocomplete="new-address-line1" />
 
                                             @error('new-address-line1')
@@ -409,8 +331,7 @@
                                             <label>Town / City <span class="required">*</span></label>
                                             <input id="new-city" type="text"
                                                 class="form-control @error('new-city') is-invalid @enderror"
-                                                name="new-city" value="{{ old('new-city') }}" required
-                                                autocomplete="new-city" />
+                                                name="new-city" value="{{ old('new-city') }}" autocomplete="new-city" />
 
                                             @error('new-city')
                                             <span class="invalid-feedback" role="alert">
@@ -424,7 +345,7 @@
                                             <label>State / Province <span class="required">*</span></label>
                                             <input id="new-province" type="text"
                                                 class="form-control @error('new-province') is-invalid @enderror"
-                                                name="new-province" value="{{ old('new-province') }}" required
+                                                name="new-province" value="{{ old('new-province') }}"
                                                 autocomplete="new-province" />
 
                                             @error('new-province')
@@ -439,7 +360,7 @@
                                             <label>Postcode / Zip <span class="required">*</span></label>
                                             <input id="new-postalcode" type="text"
                                                 class="form-control @error('new-postalcode') is-invalid @enderror"
-                                                name="new-postalcode" value="{{ old('new-postalcode') }}" required
+                                                name="new-postalcode" value="{{ old('new-postalcode') }}"
                                                 autocomplete="new-postalcode" />
 
                                             @error('new-postalcode')
@@ -453,7 +374,7 @@
                                         <div class="country-select mb-30">
                                             <label>Country <span class="required">*</span></label>
                                             <select name="new-country" id="new-country"
-                                                class="@error('new-country') is-invalid @enderror" required>
+                                                class="@error('new-country') is-invalid @enderror">
                                                 <option value="">Select</option>
                                                 <option @if (old('new-country')=='India' ) selected="selected" @endif
                                                     value="India">
@@ -473,7 +394,7 @@
                                             <input id="new-phone" type="text"
                                                 class="form-control @error('new-phone') is-invalid @enderror"
                                                 name="new-phone" value="{{ old('new-phone') }}"
-                                                placeholder="+91 1234567890" required autocomplete="new-phone" />
+                                                placeholder="+91 1234567890" autocomplete="new-phone" />
 
                                             @error('new-phone')
                                             <span class="invalid-feedback" role="alert">
@@ -527,20 +448,33 @@
                                     @endforeach
                                 </tbody>
                                 <tfoot>
+                                    @foreach (Cart::getConditions() as $item)
+                                    <tr>
+                                        <th>
+                                            {{ ucfirst($item->getType()) }} ({{ $item->getName() }})
+                                            @if ($item->getType() != 'tax')
+                                            <a href="javascript:void(0);" class="remove-condition"
+                                                data-id="{{ $item->getName() }}"
+                                                title="Remove {{ ucfirst($item->getType()) }}">
+                                                <i class="fa fa-trash text-danger ml-1"></i>
+                                            </a>
+                                            @endif
+                                        </th>
+                                        <td>
+                                            <span class="amount">
+                                                {{ ($item->getType() != 'tax' ? '-' : '') . moneyformat($item->getCalculatedValue(Cart::getSubTotal()), 'INR') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+
                                     <tr class="cart-subtotal">
                                         <th>Cart Subtotal</th>
                                         <td>
                                             <span class="amount">{{ moneyformat(Cart::getSubTotal(), 'INR') }}</span>
                                         </td>
                                     </tr>
-                                    @if($taxCondition !== null)
-                                    <tr class="cart-subtotal">
-                                        <th>{{ $taxCondition->getName() }}</th>
-                                        <td>
-                                            <span class="amount">{{ moneyformat($totalTax, 'INR') }}</span>
-                                        </td>
-                                    </tr>
-                                    @endif
+
                                     <tr class="order-total">
                                         <th>Order Total</th>
                                         <td>
@@ -640,63 +574,80 @@
         });
         
         // Add an instance of the card Element into the `card-element` <div>.
-            card.mount("#card-element");
-        
-            // Handle real-time validation errors from the card Element.
-            card.on("change", function(event) {
-                var displayError = document.getElementById("card-errors");
-                if (event.error) {
-                    displayError.textContent = event.error.message;
+        card.mount("#card-element");
+    
+        // Handle real-time validation errors from the card Element.
+        card.on("change", function(event) {
+            var displayError = document.getElementById("card-errors");
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = "";
+            }
+        });
+    
+        // Handle form submission.
+        var form = document.getElementById("payment-form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Disable the submit button to prevent repeated clicks
+            document.getElementById('complete-order').disabled = true;
+
+            var options = {
+                name: document.getElementById('name_on_card').value,
+                address_line1: document.getElementById('address-line1').value,
+                address_city: document.getElementById('city').value,
+                address_state: document.getElementById('province').value,
+                address_zip: document.getElementById('postalcode').value,
+            };
+    
+            stripe.createToken(card, options).then(function(result) {
+                if (result.error) {
+                    // Inform the user if there was an error.
+                    var errorElement = document.getElementById("card-errors");
+                    errorElement.textContent = result.error.message;
+
+                    // Enable the submit button
+                    document.getElementById('complete-order').disabled = false;
                 } else {
-                    displayError.textContent = "";
+                    // Send the token to your server.
+                    stripeTokenHandler(result.token);
                 }
             });
-        
-            // Handle form submission.
+        });
+    
+        // Submit the form with the token ID.
+        function stripeTokenHandler(token) {
+            // Insert the token ID into the form so it gets submitted to the server
             var form = document.getElementById("payment-form");
-            form.addEventListener("submit", function(event) {
-                event.preventDefault();
-
-                // Disable the submit button to prevent repeated clicks
-                document.getElementById('complete-order').disabled = true;
-
-                var options = {
-                    name: document.getElementById('name_on_card').value,
-                    address_line1: document.getElementById('address-line1').value,
-                    address_city: document.getElementById('city').value,
-                    address_state: document.getElementById('province').value,
-                    address_zip: document.getElementById('postalcode').value,
-                };
+            var hiddenInput = document.createElement("input");
+            hiddenInput.setAttribute("type", "hidden");
+            hiddenInput.setAttribute("name", "stripeToken");
+            hiddenInput.setAttribute("value", token.id);
+            form.appendChild(hiddenInput);
         
-                stripe.createToken(card, options).then(function(result) {
-                    if (result.error) {
-                        // Inform the user if there was an error.
-                        var errorElement = document.getElementById("card-errors");
-                        errorElement.textContent = result.error.message;
+            // Submit the form
+            form.submit();
+        }
 
-                        // Enable the submit button
-                        document.getElementById('complete-order').disabled = false;
-                    } else {
-                        // Send the token to your server.
-                        stripeTokenHandler(result.token);
-                    }
-                });
-            });
+        // Remove Conditions
+        const classname = document.querySelectorAll('.remove-condition');
         
-            // Submit the form with the token ID.
-            function stripeTokenHandler(token) {
-                // Insert the token ID into the form so it gets submitted to the server
-                var form = document.getElementById("payment-form");
-                var hiddenInput = document.createElement("input");
-                hiddenInput.setAttribute("type", "hidden");
-                hiddenInput.setAttribute("name", "stripeToken");
-                hiddenInput.setAttribute("value", token.id);
-                form.appendChild(hiddenInput);
+        Array.from(classname).forEach(function(element) {
+            element.addEventListener('click', function() {
+                const coupon = element.getAttribute('data-id');
             
-                // Submit the form
-                form.submit();
-            }        
+                axios.delete(`/coupon/${coupon}/condition`)
+                .then(function(response) {
+                    window.location.href = '{{ route('checkout.index') }}';
+                })
+                .catch(function(error) {
+                    console.error(error);
+                    window.location.href = '{{ route('checkout.index') }}';
+                })
+            })
+        });
     })();
-
 </script>
 @endpush

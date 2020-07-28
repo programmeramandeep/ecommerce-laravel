@@ -27,9 +27,10 @@ Route::resource('wishlist', 'WishListController')->only(['index', 'store', 'upda
 
 // Coupon routes
 Route::resource('coupon', 'CouponsController')->only(['store', 'destroy']);
+Route::delete('/coupon/{coupon}/condition', 'CouponsController@destroyCondition')->name('coupon.condition');
 
 // Checkout routes
-Route::resource('checkout', 'CheckoutController')->only(['index', 'store'])->middleware('auth');
+Route::resource('checkout', 'CheckoutController')->only(['index', 'store']);
 Route::post('/paypal-checkout', 'CheckoutController@paypalCheckout')->name('checkout.paypal');
 Route::get('/guestCheckout', 'CheckoutController@index')->name('guestCheckout.index');
 

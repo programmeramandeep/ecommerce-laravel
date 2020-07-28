@@ -18,13 +18,7 @@ class CartController extends Controller
     {
         $cartCollection = Cart::getContent();
 
-        $totalTax = 0;
-        $taxCondition = Cart::getCondition('VAT 18%');
-        if ($taxCondition !== null) {
-            $totalTax = $taxCondition->getCalculatedValue(Cart::getSubTotal());
-        }
-
-        return view('pages.cart', compact('cartCollection', 'totalTax', 'taxCondition'));
+        return view('pages.cart', compact('cartCollection'));
     }
 
     /**
