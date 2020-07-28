@@ -184,7 +184,7 @@
                 <!--Breadcrumb and Page Show Start -->
                 <div class="pagination-box fix">
                     {{-- Pagination --}}
-                    {{ $products->appends(request()->input())->links() }}
+                    {{ $products->appends(request()->input())->links('vendor.pagination.custom') }}
 
                     <div class="toolbar-sorter-footer">
                         <label>show</label>
