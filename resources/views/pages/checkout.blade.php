@@ -92,31 +92,17 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="checkout-form-list mb-30">
                                     <label for="your-email">Email <span class="required">*</span></label>
-                                    <input type="your-email" name="your-email" id="your-email"
+                                    <input type="email" name="your-email" id="your-email"
                                         class="form-control @error('your-email') is_invalid @enderror"
-                                        value="{{ old('your-email') }}" required autocomplete="your-email" />
+                                        value="{{ auth()->user()->email }}" readonly autocomplete="your-email" />
 
                                     @error('your-email')
                                     <div class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="checkout-form-list mb-30">
-                                    <label>Company Name</label>
-                                    <input id="company" type="text"
-                                        class="form-control @error('company') is-invalid @enderror" name="company"
-                                        value="{{ old('company') }}" required autocomplete="company" />
-
-                                    @error('company')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
                                     @enderror
                                 </div>
                             </div>
@@ -267,10 +253,10 @@
                                             @enderror
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="checkout-form-list mb-30">
                                             <label for="new-email">Email <span class="required">*</span></label>
-                                            <input type="new-email" name="new-email" id="new-email"
+                                            <input type="email" name="new-email" id="new-email"
                                                 class="form-control @error('new-email') is_invalid @enderror"
                                                 value="{{ old('new-email') }}" autocomplete="new-email" />
 
@@ -278,21 +264,6 @@
                                             <div class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </div>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="checkout-form-list mb-30">
-                                            <label>Company Name</label>
-                                            <input id="new-company" type="text"
-                                                class="form-control @error('new-company') is-invalid @enderror"
-                                                name="new-company" value="{{ old('new-company') }}"
-                                                autocomplete="new-company" />
-
-                                            @error('new-company')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
                                             @enderror
                                         </div>
                                     </div>
