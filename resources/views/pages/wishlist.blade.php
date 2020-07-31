@@ -61,8 +61,7 @@
                                 </td>
                                 <td class="product-thumbnail">
                                     <a href="{{ route('shop.show', $item->model->slug) }}">
-                                        <img src="{{ asset('img/products/'.$item->model->slug.'.jpg') }}"
-                                            alt="cart-image" />
+                                        <img src="{{ asset('storage/'.$item->model->image) }}" alt="cart-image" />
                                     </a>
                                 </td>
                                 <td class="product-name">
@@ -89,7 +88,6 @@
                     <!-- Wishlist Button Start -->
                     <div class="col-lg-8 col-md-7">
                         <div class="buttons-cart">
-                            <input type="submit" value="Update Cart" />
                             <a href="{{ route('shop.index') }}">Continue Shopping</a>
                         </div>
                     </div>

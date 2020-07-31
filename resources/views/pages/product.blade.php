@@ -29,7 +29,28 @@
             <div class="col-lg-5">
                 <!-- Thumbnail Large Image start -->
                 <div class="tab-content">
-                    <div id="thumb1" class="tab-pane active">
+                    <div id="thumb" class="tab-pane active">
+                        @if ($product->image)
+                        <a data-fancybox="images" href="{{ asset('storage/' . $product->image) }}">
+                            <img src="{{ asset('storage/' . $product->image) }}" alt="product-view">
+                        </a>
+                        @else
+                        <a data-fancybox="images" href="https://via.placeholder.com/400">
+                            <img src="https://via.placeholder.com/400" alt="product-view">
+                        </a>
+                        @endif
+                    </div>
+
+                    @if ($product->images)
+                    @foreach (json_decode($product->images, true) as $key => $image)
+                    <div id="thumb{{$key}}" class="tab-pane">
+                        <a data-fancybox="images" href="{{ asset('storage/' . $image) }}">
+                            <img src="{{ asset('storage/' . $image) }}" alt="product-view">
+                        </a>
+                    </div>
+                    @endforeach
+                    @else
+                    <div id="thumb1" class="tab-pane">
                         <a data-fancybox="images" href="https://via.placeholder.com/400">
                             <img src="https://via.placeholder.com/400" alt="product-view">
                         </a>
@@ -49,13 +70,28 @@
                             <img src="https://via.placeholder.com/400" alt="product-view">
                         </a>
                     </div>
+                    @endif
                 </div>
                 <!-- Thumbnail Large Image End -->
 
                 <!-- Thumbnail Image End -->
                 <div class="product-thumbnail">
                     <div class="thumb-menu nav">
-                        <a class="active" data-toggle="tab" href="#thumb1">
+                        <a class="active" data-toggle="tab" href="#thumb">
+                            @if ($product->image)
+                            <img src="{{ asset('storage/' . $product->image) }}" alt="product-thumbnail">
+                            @else
+                            <img src="https://via.placeholder.com/400" alt="product-thumbnail">
+                            @endif
+                        </a>
+                        @if ($product->images)
+                        @foreach (json_decode($product->images, true) as $key => $image)
+                        <a data-toggle="tab" href="#thumb{{$key}}">
+                            <img src="{{ asset('storage/' . $image) }}" alt="product-thumbnail">
+                        </a>
+                        @endforeach
+                        @else
+                        <a data-toggle="tab" href="#thumb1">
                             <img src="https://via.placeholder.com/400" alt="product-thumbnail">
                         </a>
                         <a data-toggle="tab" href="#thumb2">
@@ -67,6 +103,7 @@
                         <a data-toggle="tab" href="#thumb4">
                             <img src="https://via.placeholder.com/400" alt="product-thumbnail">
                         </a>
+                        @endif
                     </div>
                 </div>
                 <!-- Thumbnail image end -->
