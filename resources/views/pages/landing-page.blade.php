@@ -6,10 +6,14 @@
     <div class="slider-wrapper theme-default  nivo2">
         <!-- Slider Background  Image Start-->
         <div id="slider" class="nivoSlider">
-            <a href=""><img src="{{ asset('img/slider/3.jpg') }}" data-thumb="{{ asset('img/slider/3.jpg') }}" alt=""
-                    title="#slider-1-caption1" /></a>
-            <a href=""><img src="{{ asset('img/slider/4.jpg') }}" data-thumb="{{ asset('img/slider/4.jpg') }}" alt=""
-                    title="#slider-1-caption2" /></a>
+            <a href="">
+                <img src="https://via.placeholder.com/1920x560" data-thumb="https://via.placeholder.com/1920x560" alt=""
+                    title="#slider-1-caption1" />
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/1920x560" data-thumb="https://via.placeholder.com/1920x560" alt=""
+                    title="#slider-1-caption2" />
+            </a>
         </div>
         <!-- Slider Background  Image Start-->
         <div id="slider-1-caption1" class="nivo-html-caption nivo-caption">
@@ -52,21 +56,21 @@
             <!-- Single Banner Start -->
             <div class="col-sm-4">
                 <div class="single-banner zoom">
-                    <a href="#"><img src="{{ asset('img/banner/3.jpg') }}" alt="slider-banner"></a>
+                    <a href="#"><img src="https://via.placeholder.com/370x205" alt="slider-banner"></a>
                 </div>
             </div>
             <!-- Single Banner End -->
             <!-- Single Banner Start -->
             <div class="col-sm-4">
                 <div class="single-banner zoom">
-                    <a href="#"><img src="{{ asset('img/banner/4.jpg') }}" alt="slider-banner"></a>
+                    <a href="#"><img src="https://via.placeholder.com/370x205" alt="slider-banner"></a>
                 </div>
             </div>
             <!-- Single Banner End -->
             <!-- Single Banner Start -->
             <div class="col-sm-4">
                 <div class="single-banner zoom">
-                    <a href="#"><img src="{{ asset('img/banner/5.jpg') }}" alt="slider-banner"></a>
+                    <a href="#"><img src="https://via.placeholder.com/370x205" alt="slider-banner"></a>
                 </div>
             </div>
             <!-- Single Banner End -->
@@ -90,8 +94,13 @@
                 <!-- Product Image Start -->
                 <div class="pro-img">
                     <a href="{{ route('shop.show', $product->slug) }}">
+                        @if ($product->image !== '')
                         <img class="primary-img" src="{{ asset('img/'.$product->image) }}" alt="single-product">
                         <img class="secondary-img" src="{{ asset('img/'.$product->image) }}" alt="single-product">
+                        @else
+                        <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                        <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
+                        @endif
                     </a>
                 </div>
                 <!-- Product Image End -->
@@ -108,9 +117,12 @@
                     <p><span class="price">{{ $product->presentPrice() }}</span><del class="prev-price">$32.00</del></p>
                     <div class="pro-actions">
                         <div class="actions-secondary">
-                            <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                            <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                            <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                            <a href="" data-toggle="tooltip" title="Add to Wishlist">
+                                <i class="fa fa-heart"></i>
+                            </a>
+                            <a class="" data-toggle="tooltip" title="Add to Cart">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -131,14 +143,14 @@
             <!-- Single Banner Start -->
             <div class="col-sm-6">
                 <div class="single-banner zoom">
-                    <a href="#"><img src="{{ asset('img/banner/1.png') }}" alt="slider-banner"></a>
+                    <a href="#"><img src="https://via.placeholder.com/400" alt="slider-banner"></a>
                 </div>
             </div>
             <!-- Single Banner End -->
             <!-- Single Banner Start -->
             <div class="col-sm-6">
                 <div class="single-banner zoom">
-                    <a href="#"><img src="{{ asset('img/banner/2.png') }}" alt="slider-banner"></a>
+                    <a href="#"><img src="https://via.placeholder.com/400" alt="slider-banner"></a>
                 </div>
             </div>
             <!-- Single Banner End -->
@@ -164,7 +176,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-1.jpg') }}"
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -183,7 +195,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -202,7 +214,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -221,7 +233,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-4.jpg') }}"
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -240,106 +252,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                        </div>
-                        <!-- Double Product End -->
-                        <!-- Double Product Start -->
-                        <div class="double-pro">
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-4.jpg') }}"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-3.jpg') }}"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-1.jpg') }}"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-4.jpg') }}"
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -362,7 +275,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-1.jpg') }}"
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -381,7 +294,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -400,7 +313,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -419,7 +332,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-4.jpg') }}"
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -438,7 +351,106 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
+                                            alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                        </div>
+                        <!-- Double Product End -->
+                        <!-- Double Product Start -->
+                        <div class="double-pro">
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
+                                            alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
+                                            alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
+                                            alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
+                                            alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
                                             alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
@@ -481,82 +493,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-1.jpg') }}"
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-2.jpg') }}"
-                                                alt="single-product">
-                                        </a>
-                                    </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="pro-content">
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <h4><a href="">Products Name Here</a></h4>
-                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                        <div class="pro-actions">
-                                            <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
-                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Product Content End -->
-                                </div>
-                                <!-- Single Product End -->
-                                <!-- Single Product Start -->
-                                <div class="single-product">
-                                    <!-- Product Image Start -->
-                                    <div class="pro-img">
-                                        <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-2.jpg') }}"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-3.jpg') }}"
-                                                alt="single-product">
-                                        </a>
-                                    </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="pro-content">
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <h4><a href="">Products Name Here</a></h4>
-                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                        <div class="pro-actions">
-                                            <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
-                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Product Content End -->
-                                    <span class="sticker-new">-30%</span>
-                                </div>
-                                <!-- Single Product End -->
-                                <!-- Single Product Start -->
-                                <div class="single-product">
-                                    <!-- Product Image Start -->
-                                    <div class="pro-img">
-                                        <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-3.jpg') }}"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-4.jpg') }}"
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -590,9 +529,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-1.jpg') }}"
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -627,9 +566,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -663,9 +602,82 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-4.jpg') }}"
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
+                                                alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4><a href="">Products Name Here</a></h4>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-secondary">
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
+                                                        class="fa fa-heart"></i></a>
+                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
+                                                        class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">-30%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="">
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
+                                                alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
+                                                alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4><a href="">Products Name Here</a></h4>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-secondary">
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
+                                                        class="fa fa-heart"></i></a>
+                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
+                                                        class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="">
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
+                                                alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -707,9 +719,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-4.jpg') }}"
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -743,9 +755,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -780,45 +792,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-1.jpg') }}"
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-2.jpg') }}"
-                                                alt="single-product">
-                                        </a>
-                                    </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="pro-content">
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <h4><a href="">Products Name Here</a></h4>
-                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                        <div class="pro-actions">
-                                            <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
-                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Product Content End -->
-                                </div>
-                                <!-- Single Product End -->
-                                <!-- Single Product Start -->
-                                <div class="single-product">
-                                    <!-- Product Image Start -->
-                                    <div class="pro-img">
-                                        <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-1.jpg') }}"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -852,9 +828,9 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-2.jpg') }}"
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -888,9 +864,45 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="{{ asset('img/products/tool-3.jpg') }}"
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
-                                            <img class="secondary-img" src="{{ asset('img/products/tool-4.jpg') }}"
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
+                                                alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4><a href="">Products Name Here</a></h4>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-secondary">
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
+                                                        class="fa fa-heart"></i></a>
+                                                <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
+                                                        class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="">
+                                            <img class="primary-img" src="https://via.placeholder.com/150"
+                                                alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150"
                                                 alt="single-product">
                                         </a>
                                     </div>
@@ -944,7 +956,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-policy">
                     <div class="icone-img">
-                        <img src="{{ asset('img/icon/1.png') }}" alt="">
+                        <img src="https://via.placeholder.com/150" alt="">
                     </div>
                     <div class="policy-desc">
                         <h3>Free Delivery</h3>
@@ -957,7 +969,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-policy">
                     <div class="icone-img">
-                        <img src="{{ asset('img/icon/2.png') }}" alt="">
+                        <img src="https://via.placeholder.com/150" alt="">
                     </div>
                     <div class="policy-desc">
                         <h3>Online Support 24/7</h3>
@@ -970,7 +982,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-policy">
                     <div class="icone-img">
-                        <img src="{{ asset('img/icon/3.png') }}" alt="">
+                        <img src="https://via.placeholder.com/150" alt="">
                     </div>
                     <div class="policy-desc">
                         <h3>Money Return</h3>
@@ -983,7 +995,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-policy">
                     <div class="icone-img">
-                        <img src="{{ asset('img/icon/4.png') }}" alt="">
+                        <img src="https://via.placeholder.com/150" alt="">
                     </div>
                     <div class="policy-desc">
                         <h3>Member Discount</h3>
@@ -1009,8 +1021,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-1.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1028,8 +1039,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-2.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1051,8 +1061,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-3.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1070,8 +1079,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-4.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1093,8 +1101,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-5.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1112,8 +1119,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-6.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1135,8 +1141,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-7.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1154,8 +1159,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-8.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1177,8 +1181,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-5.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1196,8 +1199,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-6.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1219,8 +1221,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-7.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1238,8 +1239,7 @@
                 <!-- Single Product Start -->
                 <div class="single-product">
                     <div class="pro-img">
-                        <a href=""><img class="img" src="{{ asset('img/products/tool-8.jpg') }}"
-                                alt="product-image"></a>
+                        <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                     </div>
                     <div class="pro-content">
                         <div class="product-rating">
@@ -1273,7 +1273,7 @@
             <!-- Single Blog Start -->
             <div class="single-blog">
                 <div class="blog-img">
-                    <a href=""><img src="{{ asset('img/blog/1.jpg') }}" alt="blog-image"></a>
+                    <a href=""><img src="https://via.placeholder.com/250" alt="blog-image"></a>
                 </div>
                 <div class="blog-content">
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
@@ -1292,7 +1292,7 @@
             <!-- Single Blog Start -->
             <div class="single-blog">
                 <div class="blog-img">
-                    <a href=""><img src="{{ asset('img/blog/2.jpg') }}" alt="blog-image"></a>
+                    <a href=""><img src="https://via.placeholder.com/250" alt="blog-image"></a>
                 </div>
                 <div class="blog-content">
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
@@ -1311,7 +1311,7 @@
             <!-- Single Blog Start -->
             <div class="single-blog">
                 <div class="blog-img">
-                    <a href=""><img src="{{ asset('img/blog/3.jpg') }}" alt="blog-image"></a>
+                    <a href=""><img src="https://via.placeholder.com/250" alt="blog-image"></a>
                 </div>
                 <div class="blog-content">
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
@@ -1330,7 +1330,7 @@
             <!-- Single Blog Start -->
             <div class="single-blog">
                 <div class="blog-img">
-                    <a href=""><img src="{{ asset('img/blog/1.jpg') }}" alt="blog-image"></a>
+                    <a href=""><img src="https://via.placeholder.com/250" alt="blog-image"></a>
                 </div>
                 <div class="blog-content">
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
@@ -1349,7 +1349,7 @@
             <!-- Single Blog Start -->
             <div class="single-blog">
                 <div class="blog-img">
-                    <a href=""><img src="{{ asset('img/blog/2.jpg') }}" alt="blog-image"></a>
+                    <a href=""><img src="https://via.placeholder.com/250" alt="blog-image"></a>
                 </div>
                 <div class="blog-content">
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
@@ -1368,7 +1368,7 @@
             <!-- Single Blog Start -->
             <div class="single-blog">
                 <div class="blog-img">
-                    <a href=""><img src="{{ asset('img/blog/3.jpg') }}" alt="blog-image"></a>
+                    <a href=""><img src="https://via.placeholder.com/250" alt="blog-image"></a>
                 </div>
                 <div class="blog-content">
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>

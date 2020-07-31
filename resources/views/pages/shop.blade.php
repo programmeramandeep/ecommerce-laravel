@@ -82,10 +82,17 @@
                                         <!-- Product Image Start -->
                                         <div class="pro-img">
                                             <a href="{{ route('shop.show', $product->slug) }}">
-                                                <img class="primary-img" src="{{ asset('/img/'.$product->image) }}"
+                                                @if ($product->image !== '')
+                                                <img class="primary-img" src="{{ asset('img/'.$product->image) }}"
                                                     alt="single-product">
-                                                <img class="secondary-img" src="{{ asset('/img/'.$product->image) }}"
+                                                <img class="secondary-img" src="{{ asset('img/'.$product->image) }}"
                                                     alt="single-product">
+                                                @else
+                                                <img class="primary-img" src="https://via.placeholder.com/150"
+                                                    alt="single-product">
+                                                <img class="secondary-img" src="https://via.placeholder.com/150"
+                                                    alt="single-product">
+                                                @endif
                                             </a>
                                         </div>
                                         <!-- Product Image End -->
@@ -133,10 +140,17 @@
                                 <!-- Product Image Start -->
                                 <div class="pro-img">
                                     <a href="{{ route('shop.show', $product->slug) }}">
-                                        <img class="primary-img" src="{{ asset('/img/'.$product->image) }}"
+                                        @if ($product->image !== '')
+                                        <img class="primary-img" src="{{ asset('img/'.$product->image) }}"
                                             alt="single-product">
-                                        <img class="secondary-img" src="{{ asset('/img/'.$product->image) }}"
+                                        <img class="secondary-img" src="{{ asset('img/'.$product->image) }}"
                                             alt="single-product">
+                                        @else
+                                        <img class="primary-img" src="https://via.placeholder.com/150"
+                                            alt="single-product">
+                                        <img class="secondary-img" src="https://via.placeholder.com/150"
+                                            alt="single-product">
+                                        @endif
                                     </a>
                                 </div>
                                 <!-- Product Image End -->
@@ -162,9 +176,8 @@
                                         <div class="actions-secondary">
                                             <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
                                                     class="fa fa-heart"></i></a>
-                                            <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                            <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                    class="fa fa-signal"></i></a>
+                                            <a class="" data-toggle="tooltip" title="Add to Cart"><i
+                                                    class="fa fa-shopping-cart"></i></a>
                                         </div>
                                     </div>
                                 </div>

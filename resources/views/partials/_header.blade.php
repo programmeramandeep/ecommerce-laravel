@@ -62,7 +62,7 @@ $cartCollection = Cart::getContent();
             <div class="row">
                 <div class="col-xl-3 col-lg-2 col-sm-5 col-5">
                     <div class="logo">
-                        <a href="{{ url('/') }}"><img src="{{ asset('img/logo/logo.png') }}" alt="logo-image"></a>
+                        <a href="{{ url('/') }}"><img src="https://via.placeholder.com/138x36" alt="logo-image"></a>
                     </div>
                 </div>
                 <!-- Primary Vertical-Menu End -->
@@ -121,7 +121,11 @@ $cartCollection = Cart::getContent();
                                         <div class="single-cart-box">
                                             <div class="cart-img">
                                                 <a href="{{ route('shop.show', $item->model->slug) }}">
+                                                    @if ($item->model->image !== '')
                                                     <img src="{{ asset('img/'.$item->model->image) }}" alt="cart-image">
+                                                    @else
+                                                    <img src="https://via.placeholder.com/150" alt="cart-image">
+                                                    @endif
                                                 </a>
                                             </div>
                                             <div class="cart-content">

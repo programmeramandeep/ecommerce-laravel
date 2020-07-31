@@ -46,8 +46,13 @@
                             @foreach ($cartCollection as $item)
                             <tr>
                                 <td class="product-thumbnail">
-                                    <a href="{{ route('shop.show', $item->model->slug) }}"><img
-                                            src="{{ asset('img/'.$item->model->image) }}" alt="cart-image" /></a>
+                                    <a href="{{ route('shop.show', $item->model->slug) }}">
+                                        @if ($item->model->image !== '')
+                                        <img src="{{ asset('img/'.$item->model->image) }}" alt="cart-image" />
+                                        @else
+                                        <img src="https://via.placeholder.com/150" alt="cart-image">
+                                        @endif
+                                    </a>
                                 </td>
                                 <td class="product-name"><a
                                         href="{{ route('shop.show', $item->model->slug) }}">{{ $item->model->name }}</a>

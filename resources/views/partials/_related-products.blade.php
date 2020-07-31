@@ -13,8 +13,13 @@
                     <!-- Product Image Start -->
                     <div class="pro-img">
                         <a href="{{ route('shop.show', $product->slug) }}">
+                            @if ($product->image !== '')
                             <img class="primary-img" src="{{ asset('img/'.$product->image) }}" alt="single-product">
                             <img class="secondary-img" src="{{ asset('img/'.$product->image) }}" alt="single-product">
+                            @else
+                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
+                            @endif
                         </a>
                     </div>
                     <!-- Product Image End -->
