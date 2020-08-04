@@ -151,7 +151,7 @@
                             <li><a href="#">Email</a></li>
                         </ul>
                     </div>
-                    <p class="ptb-20">{{ $product->description }}</p>
+                    <p class="ptb-20">{!! $product->description !!}</p>
                 </div>
             </div>
             <!-- Thumbnail Description End -->

@@ -32,7 +32,6 @@ Route::delete('/coupon/{coupon}/condition', 'CouponsController@destroyCondition'
 // Checkout routes
 Route::resource('checkout', 'CheckoutController')->only(['index', 'store'])->middleware('auth');
 Route::post('/paypal-checkout', 'CheckoutController@paypalCheckout')->name('checkout.paypal');
-Route::get('/guestCheckout', 'CheckoutController@index')->name('guestCheckout.index');
 
 // Thankyou page route
 Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');
