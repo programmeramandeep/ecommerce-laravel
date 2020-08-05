@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 // Landing page routes
-Route::get('/', 'LandingPageController@index')->name('landing-name');
+Route::get('/', 'LandingPageController@index')->name('landing-page');
 
 // Shop routes
 Route::resource('shop', 'ShopController')->only(['index', 'show']);
@@ -54,7 +54,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/my-orders', 'OrdersController@index')->name('orders.index');
     Route::get('/my-orders/{order}', 'OrdersController@show')->name('orders.show');
 });
-
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

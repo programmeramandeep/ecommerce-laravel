@@ -21,8 +21,7 @@
         "laravel/ui": "^2.1",
         "propaganistas/laravel-phone": "^4.2",
         "stripe/stripe-php": "^7.44",
-        "tcg/voyager": "^1.4",
-        "test-hook": "^1.0"
+        "tcg/voyager": "^1.4"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
