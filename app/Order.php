@@ -12,7 +12,7 @@ class Order extends Model
         'billing_name',
         'billing_address',
         'billing_city',
-        'billing_state',
+        'billing_province',
         'billing_country',
         'billing_postalcode',
         'billing_phone',

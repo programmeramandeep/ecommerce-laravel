@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CheckoutRequest;
+use App\Mail\OrderPlaced;
 use App\Order;
 use App\OrderProduct;
 use Cart;
@@ -15,6 +16,7 @@ use Stripe\Exception\ApiConnectionException;
 use Stripe\Exception\ApiErrorException;
 use Stripe\PaymentIntent;
 use Illuminate\Http\Request;
+use Mail;
 
 class CheckoutController extends Controller
 {
@@ -64,7 +66,10 @@ class CheckoutController extends Controller
             ]);
 
             // Insert order
-            $this->addToOrdersTable($request, null);
+            $order = $this->addToOrdersTable($request, null);
+
+            // Send Mail
+            Mail::queue(new OrderPlaced($order));
 
             // Clear cart
             Cart::clear();
@@ -112,7 +117,7 @@ class CheckoutController extends Controller
             'billing_name'             => $request->billing_firstname . ' ' . $request->billing_lastname,
             'billing_address'          => $request->billing_address_line1 . ', ' . $request->billing_address_line2,
             'billing_city'             => $request->billing_city,
-            'billing_province'            => $request->billing_province,
+            'billing_province'         => $request->billing_province,
             'billing_postalcode'       => $request->billing_postalcode,
             'billing_country'          => $request->billing_country,
             'billing_phone'            => $request->billing_phone,
@@ -133,6 +138,8 @@ class CheckoutController extends Controller
                 'quantity'   => $item->quantity
             ]);
         }
+
+        return $order;
     }
 
     protected function getDiscountDetails()
