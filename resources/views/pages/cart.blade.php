@@ -54,39 +54,33 @@
                                         @endif
                                     </a>
                                 </td>
-                                <td class="product-name"><a
-                                        href="{{ route('shop.show', $item->model->slug) }}">{{ $item->model->name }}</a>
+                                <td class="product-name"><a href="{{ route('shop.show', $item->model->slug) }}">{{ $item->model->name }}</a>
                                 </td>
                                 <td class="product-price"><span class="amount">{{ $item->model->presentPrice() }}</span>
                                 </td>
                                 <td class="product-quantity">
-                                    <input type="number" class="quantity" value="{{ $item->quantity }}"
-                                        data-id="{{ $item->id }}" min="1" max="999" />
+                                    <input type="number" class="quantity" value="{{ $item->quantity }}" data-id="{{ $item->id }}" min="1" max="999" />
                                 </td>
                                 <td class="product-subtotal">
                                     {{ moneyformat(Cart::get($item->id)->getPriceSum(), 'INR') }}
                                 </td>
                                 <td class="product-wishlist">
-                                    <a href="javascript:void(0);"
-                                        onclick="event.preventDefault(); document.getElementById('cart-item-wishlist-form-{{ $item->id }}').submit();">
+                                    <a href="javascript:void(0);" onclick="event.preventDefault(); document.getElementById('cart-item-wishlist-form-{{ $item->id }}').submit();">
                                         <i class="fa fa-heart" aria-hidden="true"></i>
                                     </a>
 
-                                    <form id="cart-item-wishlist-form-{{ $item->id }}"
-                                        action="{{ route('wishlist.store') }}" method="POST" class="d-none">
+                                    <form id="cart-item-wishlist-form-{{ $item->id }}" action="{{ route('wishlist.store') }}" method="POST" class="d-none">
                                         @csrf
                                         <input type="hidden" name="id" value="{{$item->id}}" />
                                     </form>
                                 </td>
 
                                 <td class="product-remove">
-                                    <a href="javascript:void(0);"
-                                        onclick="event.preventDefault(); document.getElementById('cart-item-remove-form-{{ $item->id }}').submit();">
+                                    <a href="javascript:void(0);" onclick="event.preventDefault(); document.getElementById('cart-item-remove-form-{{ $item->id }}').submit();">
                                         <i class="fa fa-times" aria-hidden="true"></i>
                                     </a>
 
-                                    <form id="cart-item-remove-form-{{ $item->id }}"
-                                        action="{{ route('cart.destroy', $item->id) }}" method="POST" class="d-none">
+                                    <form id="cart-item-remove-form-{{ $item->id }}" action="{{ route('cart.destroy', $item->id) }}" method="POST" class="d-none">
                                         @csrf
                                         @method('DELETE')
                                     </form>
@@ -101,7 +95,6 @@
                     <!-- Cart Button Start -->
                     <div class="col-lg-8 col-md-7">
                         <div class="buttons-cart">
-                            <input type="submit" value="Update Cart" />
                             <a href="{{ route('shop.index') }}">Continue Shopping</a>
                         </div>
                     </div>

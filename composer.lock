@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "609bd4147f68888151783ffbb95993fc",
+    "content-hash": "71f2503c74ac4a6be7b9e21a7f7d966d",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -3543,16 +3543,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.45.0",
+            "version": "v7.46.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "21e5001f5e0d787e4755c8bfc00e578dce9ae058"
+                "reference": "37e768aefc024a07b0965803d27a833196fedb9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/21e5001f5e0d787e4755c8bfc00e578dce9ae058",
-                "reference": "21e5001f5e0d787e4755c8bfc00e578dce9ae058",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/37e768aefc024a07b0965803d27a833196fedb9e",
+                "reference": "37e768aefc024a07b0965803d27a833196fedb9e",
                 "shasum": ""
             },
             "require": {
@@ -3596,7 +3596,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2020-07-29T04:29:52+00:00"
+            "time": "2020-08-05T19:35:34+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

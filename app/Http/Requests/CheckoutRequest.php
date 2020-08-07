@@ -24,28 +24,17 @@ class CheckoutRequest extends FormRequest
     public function rules()
     {
         return [
-            'firstname' => 'required|string|max:100',
-            'lastname' => 'required|string|max:100',
-            'your-email' => 'required|email:rfc,spoof,filter|max:100|exists:users,email',
-            'address-line1' => 'required|string|max:255',
-            'address-line2' => 'string|nullable|max:255',
-            'city' => 'required|string|max:100',
-            'province' => 'required|string|max:100',
-            'country' => 'required|string|max:100',
-            'postalcode' => 'required|string|max:15',
-            'phone' => 'required|phone:IN|exists:users,phone',
-            'new-shipping-address' => 'nullable|bool',
-            'new-firstname' => 'exclude_unless:new-shipping-address,true|required|string|max:100',
-            'new-lastname' => 'exclude_unless:new-shipping-address,true|required|string|max:100',
-            'new-email' => 'exclude_unless:new-shipping-address,true|required|email:rfc,spoof,filter|max:100|unique:users,email',
-            'new-address-line1' => 'exclude_unless:new-shipping-address,true|required|string|max:255',
-            'new-address-line2' => 'exclude_unless:new-shipping-address,true|string|nullable|max:255',
-            'new-city' => 'exclude_unless:new-shipping-address,true|required|string|max:100',
-            'new-province' => 'exclude_unless:new-shipping-address,true|required|string|max:100',
-            'new-country' => 'exclude_unless:new-shipping-address,true|required|string|max:100',
-            'new-postalcode' => 'exclude_unless:new-shipping-address,true|required|string|max:15',
-            'new-phone' => 'exclude_unless:new-shipping-address,true|required|phone:IN|unique:users,phone',
-            'checkout-message' => 'nullable|string|max:255'
+            'billing_firstname' => 'required|string|max:100',
+            'billing_lastname' => 'required|string|max:100',
+            'billing_email' => 'required|email:rfc,spoof,filter|max:100|exists:users,email',
+            'billing_address_line1' => 'required|string|max:255',
+            'billing_address_line2' => 'string|nullable|max:255',
+            'billing_city' => 'required|string|max:100',
+            'billing_province' => 'required|string|max:100',
+            'billing_postalcode' => 'required|string|max:15',
+            'billing_country' => 'required|string|max:100',
+            'billing_phone' => 'required|phone:IN',
+            'billing_order_notes' => 'nullable|string|max:255'
         ];
     }
 }

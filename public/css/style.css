@@ -2676,7 +2676,7 @@ p.checkout-coupon input[type="submit"] {
 }
 
 #ship-box-info {
-    display: none;
+    display: block
 }
 
 .your-order {

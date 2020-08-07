@@ -39,8 +39,7 @@
                             <form action="{{ route('coupon.store') }}" method="POST">
                                 @csrf
                                 <p class="checkout-coupon">
-                                    <input type="text" class="code" placeholder="Coupon code" id="coupon_code"
-                                        name="coupon_code" value="{{ old('coupon_code') }}" required />
+                                    <input type="text" class="code" placeholder="Coupon code" id="coupon_code" name="coupon_code" value="{{ old('coupon_code') }}" required />
                                     <input type="submit" value="Apply Coupon" />
                                 </p>
                             </form>
@@ -66,12 +65,10 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="checkout-form-list">
-                                    <label for="firstname">First Name <span class="required">*</span></label>
-                                    <input id="firstname" type="text"
-                                        class="form-control @error('firstname') is-invalid @enderror" name="firstname"
-                                        value="{{ old('firstname') }}" required autocomplete="firstname" autofocus />
+                                    <label for="billing_firstname">First Name <span class="required">*</span></label>
+                                    <input id="billing_firstname" type="text" class="form-control @error('billing_firstname') is-invalid @enderror" name="billing_firstname" value="{{ old('billing_firstname') }}" required autocomplete="billing_firstname" autofocus />
 
-                                    @error('firstname')
+                                    @error('billing_firstname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -80,12 +77,10 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="checkout-form-list mb-30">
-                                    <label for="lastname">Last Name <span class="required">*</span></label>
-                                    <input id="lastname" type="text"
-                                        class="form-control @error('lastname') is-invalid @enderror" name="lastname"
-                                        value="{{ old('lastname') }}" required autocomplete="lastname" />
+                                    <label for="billing_lastname">Last Name <span class="required">*</span></label>
+                                    <input id="billing_lastname" type="text" class="form-control @error('billing_lastname') is-invalid @enderror" name="billing_lastname" value="{{ old('billing_lastname') }}" required autocomplete="billing_lastname" />
 
-                                    @error('lastname')
+                                    @error('billing_lastname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -94,12 +89,10 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="checkout-form-list mb-30">
-                                    <label for="your-email">Email <span class="required">*</span></label>
-                                    <input type="email" name="your-email" id="your-email"
-                                        class="form-control @error('your-email') is_invalid @enderror"
-                                        value="{{ auth()->user()->email }}" readonly autocomplete="your-email" />
+                                    <label for="billing_email">Email <span class="required">*</span></label>
+                                    <input type="email" name="billing_email" id="billing_email" class="form-control @error('billing_email') is_invalid @enderror" value="{{ auth()->user()->email }}" readonly autocomplete="billing_email" />
 
-                                    @error('your-email')
+                                    @error('billing_email')
                                     <div class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </div>
@@ -109,12 +102,9 @@
                             <div class="col-md-12">
                                 <div class="checkout-form-list">
                                     <label>Address <span class="required">*</span></label>
-                                    <input id="address-line1" type="text"
-                                        class="form-control @error('address-line1') is-invalid @enderror"
-                                        name="address-line1" value="{{ old('address-line1') }}" required
-                                        placeholder="Street address" autocomplete="address-line1" />
+                                    <input id="billing_address_line1" type="text" class="form-control @error('billing_address_line1') is-invalid @enderror" name="billing_address_line1" value="{{ old('billing_address_line1') }}" required placeholder="Street address" autocomplete="billing_address_line1" />
 
-                                    @error('address-line1')
+                                    @error('billing_address_line1')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -123,13 +113,9 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="checkout-form-list mtb-30">
-                                    <input id="address-line2" type="text"
-                                        class="form-control @error('address-line2') is-invalid @enderror"
-                                        name="address-line2" value="{{ old('address-line2') }}"
-                                        placeholder="Apartment, suite, unit etc. (optional)"
-                                        autocomplete="address-line2" />
+                                    <input id="billing_address_line2" type="text" class="form-control @error('billing_address_line2') is-invalid @enderror" name="billing_address_line2" value="{{ old('billing_address_line2') }}" placeholder="Apartment, suite, unit etc. (optional)" autocomplete="billing_address_line2" />
 
-                                    @error('address-line2')
+                                    @error('billing_address_line2')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -139,11 +125,9 @@
                             <div class="col-md-12">
                                 <div class="checkout-form-list mb-30">
                                     <label>Town / City <span class="required">*</span></label>
-                                    <input id="city" type="text"
-                                        class="form-control @error('city') is-invalid @enderror" name="city"
-                                        value="{{ old('city') }}" required autocomplete="city" />
+                                    <input id="billing_city" type="text" class="form-control @error('billing_city') is-invalid @enderror" name="billing_city" value="{{ old('billing_city') }}" required autocomplete="billing_city" />
 
-                                    @error('city')
+                                    @error('billing_city')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -153,11 +137,9 @@
                             <div class="col-md-6">
                                 <div class="checkout-form-list mb-30">
                                     <label>State / Province <span class="required">*</span></label>
-                                    <input id="province" type="text"
-                                        class="form-control @error('province') is-invalid @enderror" name="province"
-                                        value="{{ old('province') }}" required autocomplete="province" />
+                                    <input id="billing_province" type="text" class="form-control @error('billing_province') is-invalid @enderror" name="billing_province" value="{{ old('billing_province') }}" required autocomplete="billing_province" />
 
-                                    @error('province')
+                                    @error('billing_province')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -167,11 +149,9 @@
                             <div class="col-md-6">
                                 <div class="checkout-form-list mb-30">
                                     <label>Postcode / Zip <span class="required">*</span></label>
-                                    <input id="postalcode" type="text"
-                                        class="form-control @error('postalcode') is-invalid @enderror" name="postalcode"
-                                        value="{{ old('postalcode') }}" required autocomplete="postalcode" />
+                                    <input id="billing_postalcode" type="text" class="form-control @error('billing_postalcode') is-invalid @enderror" name="billing_postalcode" value="{{ old('billing_postalcode') }}" required autocomplete="billing_postalcode" />
 
-                                    @error('postalcode')
+                                    @error('billing_postalcode')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -181,14 +161,13 @@
                             <div class="col-md-6">
                                 <div class="country-select mb-30">
                                     <label>Country <span class="required">*</span></label>
-                                    <select name="country" id="country" class="@error('country') is-invalid @enderror"
-                                        required>
+                                    <select name="billing_country" id="billing_country" class="@error('billing_country') is-invalid @enderror" required>
                                         <option value="">Select</option>
-                                        <option @if (old('country')=='India' ) selected="selected" @endif value="India">
+                                        <option @if (old('billing_country')=='India' ) selected="selected" @endif value="India">
                                             India</option>
                                     </select>
 
-                                    @error('country')
+                                    @error('billing_country')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -198,12 +177,9 @@
                             <div class="col-md-6">
                                 <div class="checkout-form-list mb-30">
                                     <label>Phone <span class="required">*</span></label>
-                                    <input id="phone" type="text"
-                                        class="form-control @error('phone') is-invalid @enderror" name="phone"
-                                        value="{{ old('phone') }}" placeholder="+91 1234567890" required
-                                        autocomplete="phone" />
+                                    <input id="billing_phone" type="text" class="form-control @error('billing_phone') is-invalid @enderror" name="billing_phone" value="{{ old('billing_phone') }}" placeholder="+91 1234567890" required autocomplete="billing_phone" />
 
-                                    @error('phone')
+                                    @error('billing_phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -212,177 +188,11 @@
                             </div>
                         </div>
                         <div class="different-address">
-                            <div class="ship-different-title">
-                                <h3>
-                                    <label>Ship to a different address?</label>
-                                    <input class="form-check-input ml-1 mt-2" type="checkbox"
-                                        name="new-shipping-address" id="ship-box" value="true"
-                                        {{ (! empty(old('new-shipping-address')) ? 'checked' : '') }}>
-                                </h3>
-                            </div>
-                            <div id="ship-box-info">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="checkout-form-list">
-                                            <label for="new-firstname">First Name <span
-                                                    class="required">*</span></label>
-                                            <input id="new-firstname" type="text"
-                                                class="form-control @error('new-firstname') is-invalid @enderror"
-                                                name="new-firstname" value="{{ old('new-firstname') }}"
-                                                autocomplete="new-firstname" />
-
-                                            @error('new-firstname')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="checkout-form-list mb-30">
-                                            <label for="new-lastname">Last Name <span class="required">*</span></label>
-                                            <input id="new-lastname" type="text"
-                                                class="form-control @error('new-lastname') is-invalid @enderror"
-                                                name="new-lastname" value="{{ old('new-lastname') }}"
-                                                autocomplete="new-lastname" />
-
-                                            @error('new-lastname')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="checkout-form-list mb-30">
-                                            <label for="new-email">Email <span class="required">*</span></label>
-                                            <input type="email" name="new-email" id="new-email"
-                                                class="form-control @error('new-email') is_invalid @enderror"
-                                                value="{{ old('new-email') }}" autocomplete="new-email" />
-
-                                            @error('new-email')
-                                            <div class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </div>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="checkout-form-list">
-                                            <label>Address <span class="required">*</span></label>
-                                            <input id="new-address-line1" type="text"
-                                                class="form-control @error('new-address-line1') is-invalid @enderror"
-                                                name="new-address-line1" value="{{ old('new-address-line1') }}"
-                                                placeholder="Street address" autocomplete="new-address-line1" />
-
-                                            @error('new-address-line1')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="checkout-form-list mtb-30">
-                                            <input id="new-address-line2" type="text"
-                                                class="form-control @error('new-address-line2') is-invalid @enderror"
-                                                name="new-address-line2" value="{{ old('new-address-line2') }}"
-                                                placeholder="Apartment, suite, unit etc. (optional)"
-                                                autocomplete="new-address-line2" />
-
-                                            @error('new-address-line2')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="checkout-form-list mb-30">
-                                            <label>Town / City <span class="required">*</span></label>
-                                            <input id="new-city" type="text"
-                                                class="form-control @error('new-city') is-invalid @enderror"
-                                                name="new-city" value="{{ old('new-city') }}" autocomplete="new-city" />
-
-                                            @error('new-city')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="checkout-form-list mb-30">
-                                            <label>State / Province <span class="required">*</span></label>
-                                            <input id="new-province" type="text"
-                                                class="form-control @error('new-province') is-invalid @enderror"
-                                                name="new-province" value="{{ old('new-province') }}"
-                                                autocomplete="new-province" />
-
-                                            @error('new-province')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="checkout-form-list mb-30">
-                                            <label>Postcode / Zip <span class="required">*</span></label>
-                                            <input id="new-postalcode" type="text"
-                                                class="form-control @error('new-postalcode') is-invalid @enderror"
-                                                name="new-postalcode" value="{{ old('new-postalcode') }}"
-                                                autocomplete="new-postalcode" />
-
-                                            @error('new-postalcode')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="country-select mb-30">
-                                            <label>Country <span class="required">*</span></label>
-                                            <select name="new-country" id="new-country"
-                                                class="@error('new-country') is-invalid @enderror">
-                                                <option value="">Select</option>
-                                                <option @if (old('new-country')=='India' ) selected="selected" @endif
-                                                    value="India">
-                                                    India</option>
-                                            </select>
-
-                                            @error('new-country')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="checkout-form-list mb-30">
-                                            <label>Phone <span class="required">*</span></label>
-                                            <input id="new-phone" type="text"
-                                                class="form-control @error('new-phone') is-invalid @enderror"
-                                                name="new-phone" value="{{ old('new-phone') }}"
-                                                placeholder="+91 1234567890" autocomplete="new-phone" />
-
-                                            @error('new-phone')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="order-notes">
                                 <div class="checkout-form-list">
                                     <label>Order Notes</label>
-                                    <textarea id="checkout-message" name="checkout-message"
-                                        class="@error('checkout-message') is-invalid @enderror" cols="30" rows="10"
-                                        placeholder="Notes about your order, e.g. special notes for delivery.">{{ old('checkout-message') }}</textarea>
-                                    @error('checkout-message')
+                                    <textarea id="billing_order_notes" name="billing_order_notes" class="@error('billing_order_notes') is-invalid @enderror" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery.">{{ old('billing_order_notes') }}</textarea>
+                                    @error('billing_order_notes')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -424,9 +234,7 @@
                                         <th>
                                             {{ ucfirst($item->getType()) }} ({{ $item->getName() }})
                                             @if ($item->getType() != 'tax')
-                                            <a href="javascript:void(0);" class="remove-condition"
-                                                data-id="{{ $item->getName() }}"
-                                                title="Remove {{ ucfirst($item->getType()) }}">
+                                            <a href="javascript:void(0);" class="remove-condition" data-id="{{ $item->getName() }}" title="Remove {{ ucfirst($item->getType()) }}">
                                                 <i class="fa fa-trash text-danger ml-1"></i>
                                             </a>
                                             @endif
@@ -465,20 +273,16 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingOne">
                                             <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                                    href="#collapseOne" aria-expanded="true"
-                                                    aria-controls="collapseOne">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                     Credit Card
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="collapseOne" class="panel-collapse collapse  in show" role="tabpanel"
-                                            aria-labelledby="headingOne">
+                                        <div id="collapseOne" class="panel-collapse collapse  in show" role="tabpanel" aria-labelledby="headingOne">
                                             <div class="panel-body">
                                                 <div class="form-group">
-                                                    <label for="name_on_card">Name on Card</label>
-                                                    <input type="text" name="name_on_card" id="name_on_card"
-                                                        class="form-control" placeholder="Name">
+                                                    <label for="billing_name_on_card">Name on Card</label>
+                                                    <input type="text" name="billing_name_on_card" id="billing_name_on_card" class="form-control" placeholder="Name">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="card-element">
@@ -496,8 +300,7 @@
                                     </div>
                                 </div>
                                 <div class="order-button-payment">
-                                    <input type="submit" id="complete-order" value="Place order"
-                                        @if(Cart::getContent()->count() === 0 || Cart::getTotal() == 0) disabled @endif
+                                    <input type="submit" id="complete-order" value="Place order" @if(Cart::getContent()->count() === 0 || Cart::getTotal() == 0) disabled @endif
                                     />
                                 </div>
                             </div>
@@ -566,11 +369,11 @@
             document.getElementById('complete-order').disabled = true;
 
             var options = {
-                name: document.getElementById('name_on_card').value,
-                address_line1: document.getElementById('address-line1').value,
-                address_city: document.getElementById('city').value,
-                address_state: document.getElementById('province').value,
-                address_zip: document.getElementById('postalcode').value,
+                name: document.getElementById('billing_name_on_card').value,
+                address_line1: document.getElementById('billing_address_line1').value,
+                address_city: document.getElementById('billing_city').value,
+                address_state: document.getElementById('billing_province').value,
+                address_zip: document.getElementById('billing_postalcode').value,
             };
     
             stripe.createToken(card, options).then(function(result) {
