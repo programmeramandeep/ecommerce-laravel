@@ -112,7 +112,7 @@ class CheckoutController extends Controller
             'billing_name'             => $request->billing_firstname . ' ' . $request->billing_lastname,
             'billing_address'          => $request->billing_address_line1 . ', ' . $request->billing_address_line2,
             'billing_city'             => $request->billing_city,
-            'billing_state'            => $request->billing_province,
+            'billing_province'            => $request->billing_province,
             'billing_postalcode'       => $request->billing_postalcode,
             'billing_country'          => $request->billing_country,
             'billing_phone'            => $request->billing_phone,
@@ -139,7 +139,7 @@ class CheckoutController extends Controller
     {
         $discounts = Cart::getConditions()->map(function ($item) {
             if ($item->getType() != 'tax') {
-                $this->billing_discount += $item->getValue();
+                $this->billing_discount += $item->getCalculatedValue(Cart::getSubTotal());
                 return $item->getName() . ', ' . $item->getValue();
             }
         })->values()->toJson();

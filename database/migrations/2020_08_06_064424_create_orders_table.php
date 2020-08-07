@@ -20,7 +20,7 @@ class CreateOrdersTable extends Migration
             $table->string('billing_name');
             $table->string('billing_address');
             $table->string('billing_city');
-            $table->string('billing_state');
+            $table->string('billing_province');
             $table->string('billing_country');
             $table->string('billing_postalcode');
             $table->string('billing_phone');
