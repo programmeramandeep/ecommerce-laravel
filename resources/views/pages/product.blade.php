@@ -188,7 +188,7 @@
                             <div class="group-title">
                                 <h2>customer review</h2>
                             </div>
-                            <h4 class="review-mini-title">Jantrik</h4>
+                            <h4 class="review-mini-title">Amandeep Singh</h4>
                             <ul class="review-list">
                                 <!-- Single Review List Start -->
                                 <li>
@@ -198,7 +198,7 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star-o"></i>
                                     <i class="fa fa-star-o"></i>
-                                    <label>Jantrik</label>
+                                    <label>Amandeep Singh</label>
                                 </li>
                                 <!-- Single Review List End -->
                                 <!-- Single Review List Start -->
@@ -209,7 +209,7 @@
                                     <i class="fa fa-star-o"></i>
                                     <i class="fa fa-star-o"></i>
                                     <i class="fa fa-star-o"></i>
-                                    <label>Review by <a href="">Jantrik</a></label>
+                                    <label>Review by <a href="">Amandeep Singh</a></label>
                                 </li>
                                 <!-- Single Review List End -->
                                 <!-- Single Review List Start -->

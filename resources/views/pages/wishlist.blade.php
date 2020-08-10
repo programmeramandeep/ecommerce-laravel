@@ -47,14 +47,11 @@
                             @foreach ($wishListCollection as $item)
                             <tr>
                                 <td class="product-remove">
-                                    <a href="javascript:void(0);"
-                                        onclick="event.preventDefault(); document.getElementById('cart-item-remove-form-{{ $item->id }}').submit();">
+                                    <a href="javascript:void(0);" onclick="event.preventDefault(); document.getElementById('cart-item-remove-form-{{ $item->id }}').submit();">
                                         <i class="fa fa-times" aria-hidden="true"></i>
                                     </a>
 
-                                    <form id="cart-item-remove-form-{{ $item->id }}"
-                                        action="{{ route('wishlist.destroy', $item->id) }}" method="POST"
-                                        class="d-none">
+                                    <form id="cart-item-remove-form-{{ $item->id }}" action="{{ route('wishlist.destroy', $item->id) }}" method="POST" class="d-none">
                                         @csrf
                                         @method('DELETE')
                                     </form>

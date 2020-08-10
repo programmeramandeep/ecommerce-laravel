@@ -104,7 +104,7 @@
     <div class="footer-bottom off-white-bg2">
         <div class="container">
             <div class="footer-bottom-content">
-                <p class="copy-right-text">Copyright © <a href="">Jantrik</a> All Rights Reserved.</p>
+                <p class="copy-right-text">Copyright © <a href="">Amandeep Singh</a> All Rights Reserved.</p>
                 <div class="footer-social-content">
                     {{ menu('footer', 'partials.menus.footer') }}
                 </div>

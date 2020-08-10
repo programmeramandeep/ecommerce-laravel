@@ -17,8 +17,9 @@ $cartCollection = Cart::getContent();
                 <!-- Search Box Start -->
                 <div class="col-lg-4 col-md-6 ml-auto mr-auto">
                     <div class="search-box-view">
-                        <form action="#">
-                            <input type="text" class="email" placeholder="Search Your Product" name="product">
+                        <form action="{{ route('search') }}" method="GET">
+                            <input type="text" class="email" placeholder="Search Your Product" name="query"
+                                value="{{ request()->input('query') }}" autocomplete="off">
                             <button type="submit" class="submit"></button>
                         </form>
                     </div>

@@ -43,7 +43,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Search routes
-Route::get('/search', 'ShopController@index')->name('search');
+Route::get('/search', 'ShopController@search')->name('search');
 Route::get('/search-algolia', 'ShopController@searchAlgolia')->name('search-algolia');
 
 // User routes

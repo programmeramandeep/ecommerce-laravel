@@ -21,6 +21,11 @@
     <div class="container">
         <!-- Row End -->
         <div class="row">
+            <div class="col-lg-12">
+                {{-- Messages --}}
+                @include('partials._messages')
+            </div>
+
             <!-- Sidebar Shopping Option Start -->
             <div class="col-lg-3  order-2">
                 <div class="sidebar white-bg">
@@ -31,8 +36,7 @@
                         <ul>
                             @foreach ($categories as $category)
                             <li>
-                                <a href="{{ route('shop.index', ['category' => $category->slug]) }}"
-                                    class="{{ $category->setActiveCategory($category->slug) }}">{{ $category->name }}</a>
+                                <a href="{{ route('shop.index', ['category' => $category->slug]) }}" class="{{ $category->setActiveCategory($category->slug) }}">{{ $category->name }}</a>
                             </li>
                             @endforeach
                         </ul>
@@ -83,15 +87,11 @@
                                         <div class="pro-img">
                                             <a href="{{ route('shop.show', $product->slug) }}">
                                                 @if ($product->image !== '')
-                                                <img class="primary-img" src="{{ asset('storage/'.$product->image) }}"
-                                                    alt="single-product">
-                                                <img class="secondary-img" src="{{ asset('storage/'.$product->image) }}"
-                                                    alt="single-product">
+                                                <img class="primary-img" src="{{ asset('storage/'.$product->image) }}" alt="single-product">
+                                                <img class="secondary-img" src="{{ asset('storage/'.$product->image) }}" alt="single-product">
                                                 @else
-                                                <img class="primary-img" src="https://via.placeholder.com/150"
-                                                    alt="single-product">
-                                                <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                    alt="single-product">
+                                                <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                                <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                                 @endif
                                             </a>
                                         </div>
@@ -105,11 +105,9 @@
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                             </div>
-                                            <h4><a
-                                                    href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
+                                            <h4><a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
                                             </h4>
-                                            <p><span class="price">{{ $product->presentPrice() }}</span><del
-                                                    class="prev-price">$32.00</del></p>
+                                            <p><span class="price">{{ $product->presentPrice() }}</span><del class="prev-price">$32.00</del></p>
                                             <div class="pro-actions">
                                                 <div class="actions-secondary">
                                                     <a href="" data-toggle="tooltip" title="Add to Wishlist">
@@ -141,15 +139,11 @@
                                 <div class="pro-img">
                                     <a href="{{ route('shop.show', $product->slug) }}">
                                         @if ($product->image !== '')
-                                        <img class="primary-img" src="{{ asset('storage/'.$product->image) }}"
-                                            alt="single-product">
-                                        <img class="secondary-img" src="{{ asset('storage/'.$product->image) }}"
-                                            alt="single-product">
+                                        <img class="primary-img" src="{{ asset('storage/'.$product->image) }}" alt="single-product">
+                                        <img class="secondary-img" src="{{ asset('storage/'.$product->image) }}" alt="single-product">
                                         @else
-                                        <img class="primary-img" src="https://via.placeholder.com/150"
-                                            alt="single-product">
-                                        <img class="secondary-img" src="https://via.placeholder.com/150"
-                                            alt="single-product">
+                                        <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                        <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         @endif
                                     </a>
                                 </div>
@@ -165,8 +159,7 @@
                                     </div>
                                     <h4><a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
                                     </h4>
-                                    <p><span class="price">{{ $product->presentPrice() }}</span><del
-                                            class="prev-price">$32.00</del></p>
+                                    <p><span class="price">{{ $product->presentPrice() }}</span><del class="prev-price">$32.00</del></p>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         Obcaecati velit,
                                         similique voluptas doloribus assumenda quis libero animi
@@ -174,10 +167,8 @@
                                         quisquam, quaerat ea laboriosam incidunt ullam.</p>
                                     <div class="pro-actions">
                                         <div class="actions-secondary">
-                                            <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                    class="fa fa-heart"></i></a>
-                                            <a class="" data-toggle="tooltip" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
+                                            <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                            <a class="" data-toggle="tooltip" title="Add to Cart"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -234,13 +225,13 @@
             url = '{!! route('shop.index', ['category' => request()->category, 'limit' => request()->limit, 'page' => request()->page]) !!}';
             window.location.replace(url + (url.indexOf("?") > 0 ? '&' : '?') + 'sort=' + this.value);
         });
-        
+
         // Product limiter
         const limiter = document.getElementById('product-limit');
         limiter.addEventListener('change', function() {
             url = '{!! route('shop.index', ['category' => request()->category, 'sort' => request()->sort, 'page' => request()->page]) !!}';
             window.location.replace(url + (url.indexOf("?") > 0 ? '&' : '?') + 'limit=' + this.value);
         });
-    })();   
+    })();
 </script>
 @endpush

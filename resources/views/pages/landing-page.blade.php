@@ -1279,7 +1279,7 @@
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
                     <div class="blog-meta">
                         <ul>
-                            <li><span>By: </span> <a href="#">Jantrik,</a></li>
+                            <li><span>By: </span> <a href="#">Amandeep Singh,</a></li>
                             <li><span>On: </span> <a href="#">05 Nov, 2018</a></li>
                         </ul>
                     </div>
@@ -1298,7 +1298,7 @@
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
                     <div class="blog-meta">
                         <ul>
-                            <li><span>By </span> <a href="#">Jantrik, </a></li>
+                            <li><span>By </span> <a href="#">Amandeep Singh, </a></li>
                             <li><span>On </span> <a href="#">05 Nov, 2018</a></li>
                         </ul>
                     </div>
@@ -1317,7 +1317,7 @@
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
                     <div class="blog-meta">
                         <ul>
-                            <li><span>By </span> <a href="#">Jantrik, </a></li>
+                            <li><span>By </span> <a href="#">Amandeep Singh, </a></li>
                             <li><span>On </span> <a href="#">05 Nov, 2018</a></li>
                         </ul>
                     </div>
@@ -1336,7 +1336,7 @@
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
                     <div class="blog-meta">
                         <ul>
-                            <li><span>By </span> <a href="#">Jantrik, </a></li>
+                            <li><span>By </span> <a href="#">Amandeep Singh, </a></li>
                             <li><span>On </span> <a href="#">05 Nov, 2018</a></li>
                         </ul>
                     </div>
@@ -1355,7 +1355,7 @@
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
                     <div class="blog-meta">
                         <ul>
-                            <li><span>By </span> <a href="#">Jantrik, </a></li>
+                            <li><span>By </span> <a href="#">Amandeep Singh, </a></li>
                             <li><span>On </span> <a href="#">05 Nov, 2018</a></li>
                         </ul>
                     </div>
@@ -1374,7 +1374,7 @@
                     <h4 class="">Lorem ipsum dolor sit amet, consectl adip elit, sed do eiusmod tempor</a></h4>
                     <div class="blog-meta">
                         <ul>
-                            <li><span>By </span> <a href="#">Jantrik, </a></li>
+                            <li><span>By </span> <a href="#">Amandeep Singh, </a></li>
                             <li><span>On </span> <a href="#">05 Nov, 2018</a></li>
                         </ul>
                     </div>

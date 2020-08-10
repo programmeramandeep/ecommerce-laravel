@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
+use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
@@ -50,5 +51,18 @@ class ShopController extends Controller
         $relatedProducts = Product::where('slug', '!=', $slug)->mightAlsoLike()->get();
 
         return view('pages.product', compact('product', 'relatedProducts'));
+    }
+
+    public function search(Request $request)
+    {
+        $request->validate([
+            'query' => 'required|min:3'
+        ]);
+
+        $query = $request->input('query');
+
+        $products = Product::search($query)->paginate(12);
+
+        return view('pages.search-results', compact('products'));
     }
 }

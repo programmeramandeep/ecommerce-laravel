@@ -22,14 +22,16 @@
 <!-- coupon-area start -->
 <div class="coupon-area">
     <div class="container">
-        @include('partials._messages')
-
         <!-- Section Title Start -->
         <div class="section-title mb-20">
             <h2>checkout</h2>
         </div>
         <!-- Section Title Start End -->
         <div class="row">
+            <div class="col-lg-12">
+                {{-- Messages --}}
+                @include('partials._messages')
+            </div>
             <div class="col-lg-12">
                 <div class="coupon-accordion">
                     <!-- ACCORDION START -->
@@ -319,10 +321,10 @@
     (function() {
         // Create a Stripe client.
         var stripe = Stripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
-        
+
         // Create an instance of Elements.
         var elements = stripe.elements();
-        
+
         // Custom styling can be passed to options when creating an Element.
         // (Note that this demo uses a wider set of styles than the guide below.)
         var style = {
@@ -340,16 +342,16 @@
                 iconColor: "#fa755a"
             }
         };
-        
+
         // Create an instance of the card Element.
         var card = elements.create("card", {
             style: style,
             hidePostalCode: true
         });
-        
+
         // Add an instance of the card Element into the `card-element` <div>.
         card.mount("#card-element");
-    
+
         // Handle real-time validation errors from the card Element.
         card.on("change", function(event) {
             var displayError = document.getElementById("card-errors");
@@ -359,7 +361,7 @@
                 displayError.textContent = "";
             }
         });
-    
+
         // Handle form submission.
         var form = document.getElementById("payment-form");
         form.addEventListener("submit", function(event) {
@@ -375,7 +377,7 @@
                 address_state: document.getElementById('billing_province').value,
                 address_zip: document.getElementById('billing_postalcode').value,
             };
-    
+
             stripe.createToken(card, options).then(function(result) {
                 if (result.error) {
                     // Inform the user if there was an error.
@@ -390,7 +392,7 @@
                 }
             });
         });
-    
+
         // Submit the form with the token ID.
         function stripeTokenHandler(token) {
             // Insert the token ID into the form so it gets submitted to the server
@@ -400,18 +402,18 @@
             hiddenInput.setAttribute("name", "stripeToken");
             hiddenInput.setAttribute("value", token.id);
             form.appendChild(hiddenInput);
-        
+
             // Submit the form
             form.submit();
         }
 
         // Remove Conditions
         const classname = document.querySelectorAll('.remove-condition');
-        
+
         Array.from(classname).forEach(function(element) {
             element.addEventListener('click', function() {
                 const coupon = element.getAttribute('data-id');
-            
+
                 axios.delete(`/coupon/${coupon}/condition`)
                 .then(function(response) {
                     window.location.href = '{{ route('checkout.index') }}';
