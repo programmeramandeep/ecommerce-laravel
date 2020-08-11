@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Nicolaslopezj\Searchable\SearchableTrait;
+use Laravel\Scout\Searchable;
 
 class Product extends Model
 {
-    use SearchableTrait;
+    use SearchableTrait, Searchable;
 
     protected $fillable = [
         'name', 'slug', 'details', 'price', 'description', 'featured', 'quantity', 'image', 'images'
