@@ -4,11 +4,12 @@
         "8be5969441cc59ca8a5c435dac3cfadc"
     );
     const products = client.initIndex("products");
+    var enterPressed = false;
 
     autocomplete("#aa-search-input", {}, [
         {
             source: autocomplete.sources.hits(products, {
-                hitsPerPage: 10
+                hitsPerPage: 50
             }),
             displayKey: "name",
             templates: {
@@ -28,8 +29,6 @@
                     `;
 
                     return markup;
-
-                    // return `<span>${_highlightResult.name.value}</span><span>${_highlightResult.details.value}</span>`;
                 },
                 empty: function(result) {
                     return (
@@ -40,8 +39,18 @@
                 }
             }
         }
-    ]).on("autocomplete:selected", function(event, suggestion, dataset) {
-        window.location.href =
-            window.location.origin + "/shop/" + suggestion.slug;
-    });
+    ])
+        .on("autocomplete:selected", function(event, suggestion, dataset) {
+            window.location.href =
+                window.location.origin + "/shop/" + suggestion.slug;
+            enterPressed = true;
+        })
+        .on("keyup", function(event) {
+            if (event.keyCode == 13 && !enterPressed) {
+                window.location.href =
+                    window.location.origin +
+                    "/search-algolia?products[query]=" +
+                    document.getElementById("aa-search-input").value;
+            }
+        });
 })();

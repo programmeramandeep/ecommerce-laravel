@@ -24,3 +24,6 @@
 <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
 <!-- modernizr js -->
 <script src="{{ asset('js/vendor/modernizr-2.8.3.min.js') }}"></script>
+{{-- Algolia instant search --}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css">

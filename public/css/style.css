@@ -4303,7 +4303,7 @@ legend {
 
 
 
-/* search */
+/* alogilia search */
 .aa-input-container {
     display: inline-block;
     position: relative;
@@ -4341,9 +4341,32 @@ legend {
 .aa-dropdown-menu {
     background-color: #fff;
     border: 1px solid rgba(228, 228, 228, 0.6);
-    width: 300px;
+    width: 320px;
+    max-height: 300px;
+    overflow-y: scroll;
     margin-top: 10px;
     box-sizing: border-box;
+    padding: 10px
+}
+
+/* width */
+.aa-dropdown-menu::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.aa-dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.aa-dropdown-menu::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.aa-dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .aa-suggestion {
@@ -4401,9 +4424,6 @@ legend {
     cursor: pointer;
     -webkit-transition: .2s;
     transition: .2s;
-    /* display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; */
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -4450,4 +4470,15 @@ legend {
 
 .ais-hits--item em {
     background-color: rgba(58, 150, 207, 0.3);
+}
+
+.ais-SearchBox {
+    margin: 1em 0;
+}
+
+#stats span {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    display: block;
 }
