@@ -25,3 +25,8 @@
 <script src="{{ asset('js/plugins.js') }}"></script>
 <!-- main js -->
 <script src="{{ asset('js/main.js') }}"></script>
+<!-- algolia js -->
+<!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="{{ asset('js/algolia.js') }}"></script>

@@ -1,6 +1,3 @@
-@php
-$cartCollection = Cart::getContent();
-@endphp
 <!-- Header Area Start -->
 <header>
     <!-- Header Top Start -->
@@ -17,11 +14,7 @@ $cartCollection = Cart::getContent();
                 <!-- Search Box Start -->
                 <div class="col-lg-4 col-md-6 ml-auto mr-auto">
                     <div class="search-box-view">
-                        <form action="{{ route('search') }}" method="GET">
-                            <input type="text" class="email" placeholder="Search Your Product" name="query"
-                                value="{{ request()->input('query') }}" autocomplete="off">
-                            <button type="submit" class="submit"></button>
-                        </form>
+                        @include('partials._search')
                     </div>
                 </div>
                 <!-- Search Box End -->
@@ -89,12 +82,10 @@ $cartCollection = Cart::getContent();
                                     @else
                                     <li><a href="">Account</a></li>
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                            style="display: none;">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
                                         </form>
                                     </li>
@@ -109,7 +100,7 @@ $cartCollection = Cart::getContent();
                             <li>
                                 <a href="{{ route('cart.index') }}">
                                     <i class="fa fa-shopping-basket"></i>
-                                    <span class="cart-counter">{{ $cartCollection->count() }}</span>
+                                    <span class="cart-counter">{{ Cart::getContent()->count() }}</span>
                                 </a>
 
                                 <ul class="ht-dropdown main-cart-box">
@@ -117,14 +108,13 @@ $cartCollection = Cart::getContent();
                                     <h6 class="text-capitalize">No items in Cart!</h6>
                                     @else
                                     <li>
-                                        @foreach ($cartCollection as $item)
+                                        @foreach (Cart::getContent() as $item)
                                         <!-- Cart Box Start -->
                                         <div class="single-cart-box">
                                             <div class="cart-img">
                                                 <a href="{{ route('shop.show', $item->model->slug) }}">
                                                     @if ($item->model->image !== '')
-                                                    <img src="{{ asset('storage/'.$item->model->image) }}"
-                                                        alt="cart-image">
+                                                    <img src="{{ asset('storage/'.$item->model->image) }}" alt="cart-image">
                                                     @else
                                                     <img src="https://via.placeholder.com/150" alt="cart-image">
                                                     @endif
@@ -137,14 +127,11 @@ $cartCollection = Cart::getContent();
                                                 </h6>
                                                 <span>{{ $item->quantity }} × {{ $item->model->presentPrice() }}</span>
                                             </div>
-                                            <a href="javascript:void(0);" class="del-icone"
-                                                onclick="event.preventDefault(); document.getElementById('cart-item-remove-{{ $item->id }}').submit();">
+                                            <a href="javascript:void(0);" class="del-icone" onclick="event.preventDefault(); document.getElementById('cart-item-remove-{{ $item->id }}').submit();">
                                                 <i class="fa fa-window-close-o"></i>
                                             </a>
 
-                                            <form id="cart-item-remove-{{ $item->id }}"
-                                                action="{{ route('cart.destroy', $item->id) }}" method="POST"
-                                                class="d-none">
+                                            <form id="cart-item-remove-{{ $item->id }}" action="{{ route('cart.destroy', $item->id) }}" method="POST" class="d-none">
                                                 @csrf
                                                 @method('DELETE')
                                             </form>
@@ -154,8 +141,7 @@ $cartCollection = Cart::getContent();
 
                                         <!-- Cart Footer Inner Start -->
                                         <div class="cart-footer fix">
-                                            <h5>total :<span
-                                                    class="f-right">{{ moneyFormat(Cart::getTotal(), 'INR') }}</span>
+                                            <h5>total :<span class="f-right">{{ moneyFormat(Cart::getTotal(), 'INR') }}</span>
                                             </h5>
                                             <div class="cart-actions">
                                                 <a class="checkout" href="{{ route('checkout.index') }}">Checkout</a>
