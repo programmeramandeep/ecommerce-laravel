@@ -30,7 +30,7 @@
                 <!-- Thumbnail Large Image start -->
                 <div class="tab-content">
                     <div id="thumb" class="tab-pane active">
-                        @if ($product->image)
+                        @if (!$product->image)
                         <a data-fancybox="images" href="{{ secure_asset('storage/' . $product->image) }}">
                             <img src="{{ secure_asset('storage/' . $product->image) }}" alt="product-view">
                         </a>
@@ -41,7 +41,7 @@
                         @endif
                     </div>
 
-                    @if ($product->images)
+                    @if (!$product->images)
                     @foreach (json_decode($product->images, true) as $key => $image)
                     <div id="thumb{{$key}}" class="tab-pane">
                         <a data-fancybox="images" href="{{ secure_asset('storage/' . $image) }}">
@@ -65,11 +65,6 @@
                             <img src="https://via.placeholder.com/400" alt="product-view">
                         </a>
                     </div>
-                    <div id="thumb4" class="tab-pane">
-                        <a data-fancybox="images" href="https://via.placeholder.com/400">
-                            <img src="https://via.placeholder.com/400" alt="product-view">
-                        </a>
-                    </div>
                     @endif
                 </div>
                 <!-- Thumbnail Large Image End -->
@@ -78,13 +73,13 @@
                 <div class="product-thumbnail">
                     <div class="thumb-menu nav">
                         <a class="active" data-toggle="tab" href="#thumb">
-                            @if ($product->image)
+                            @if (!$product->image)
                             <img src="{{ secure_asset('storage/' . $product->image) }}" alt="product-thumbnail">
                             @else
                             <img src="https://via.placeholder.com/400" alt="product-thumbnail">
                             @endif
                         </a>
-                        @if ($product->images)
+                        @if (!$product->images)
                         @foreach (json_decode($product->images, true) as $key => $image)
                         <a data-toggle="tab" href="#thumb{{$key}}">
                             <img src="{{ secure_asset('storage/' . $image) }}" alt="product-thumbnail">
@@ -98,9 +93,6 @@
                             <img src="https://via.placeholder.com/400" alt="product-thumbnail">
                         </a>
                         <a data-toggle="tab" href="#thumb3">
-                            <img src="https://via.placeholder.com/400" alt="product-thumbnail">
-                        </a>
-                        <a data-toggle="tab" href="#thumb4">
                             <img src="https://via.placeholder.com/400" alt="product-thumbnail">
                         </a>
                         @endif

@@ -92,7 +92,7 @@
                 <!-- Product Image Start -->
                 <div class="pro-img">
                     <a href="{{ route('shop.show', $product->slug) }}">
-                        @if ($product->image !== '')
+                        @if ($product->image == '')
                         <img class="primary-img" src="{{ secure_asset('storage/'.$product->image) }}" alt="single-product">
                         <img class="secondary-img" src="{{ secure_asset('storage/'.$product->image) }}" alt="single-product">
                         @else

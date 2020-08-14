@@ -113,7 +113,7 @@
                                         <div class="single-cart-box">
                                             <div class="cart-img">
                                                 <a href="{{ route('shop.show', $item->model->slug) }}">
-                                                    @if ($item->model->image !== '')
+                                                    @if ($item->model->image == '')
                                                     <img src="{{ secure_asset('storage/'.$item->model->image) }}" alt="cart-image">
                                                     @else
                                                     <img src="https://via.placeholder.com/150" alt="cart-image">
