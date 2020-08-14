@@ -65,5 +65,5 @@
 @push('extra_js')
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js"></script>
-<script src="{{ asset('js/algolia-instantsearch.js') }}"></script>
+<script src="{{ secure_asset('js/algolia-instantsearch.js') }}"></script>
 @endpush

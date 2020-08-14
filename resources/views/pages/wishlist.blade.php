@@ -58,7 +58,7 @@
                                 </td>
                                 <td class="product-thumbnail">
                                     <a href="{{ route('shop.show', $item->model->slug) }}">
-                                        <img src="{{ asset('storage/'.$item->model->image) }}" alt="cart-image" />
+                                        <img src="{{ secure_asset('storage/'.$item->model->image) }}" alt="cart-image" />
                                     </a>
                                 </td>
                                 <td class="product-name">

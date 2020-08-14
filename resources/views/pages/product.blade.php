@@ -31,8 +31,8 @@
                 <div class="tab-content">
                     <div id="thumb" class="tab-pane active">
                         @if ($product->image)
-                        <a data-fancybox="images" href="{{ asset('storage/' . $product->image) }}">
-                            <img src="{{ asset('storage/' . $product->image) }}" alt="product-view">
+                        <a data-fancybox="images" href="{{ secure_asset('storage/' . $product->image) }}">
+                            <img src="{{ secure_asset('storage/' . $product->image) }}" alt="product-view">
                         </a>
                         @else
                         <a data-fancybox="images" href="https://via.placeholder.com/400">
@@ -44,8 +44,8 @@
                     @if ($product->images)
                     @foreach (json_decode($product->images, true) as $key => $image)
                     <div id="thumb{{$key}}" class="tab-pane">
-                        <a data-fancybox="images" href="{{ asset('storage/' . $image) }}">
-                            <img src="{{ asset('storage/' . $image) }}" alt="product-view">
+                        <a data-fancybox="images" href="{{ secure_asset('storage/' . $image) }}">
+                            <img src="{{ secure_asset('storage/' . $image) }}" alt="product-view">
                         </a>
                     </div>
                     @endforeach
@@ -79,7 +79,7 @@
                     <div class="thumb-menu nav">
                         <a class="active" data-toggle="tab" href="#thumb">
                             @if ($product->image)
-                            <img src="{{ asset('storage/' . $product->image) }}" alt="product-thumbnail">
+                            <img src="{{ secure_asset('storage/' . $product->image) }}" alt="product-thumbnail">
                             @else
                             <img src="https://via.placeholder.com/400" alt="product-thumbnail">
                             @endif
@@ -87,7 +87,7 @@
                         @if ($product->images)
                         @foreach (json_decode($product->images, true) as $key => $image)
                         <a data-toggle="tab" href="#thumb{{$key}}">
-                            <img src="{{ asset('storage/' . $image) }}" alt="product-thumbnail">
+                            <img src="{{ secure_asset('storage/' . $image) }}" alt="product-thumbnail">
                         </a>
                         @endforeach
                         @else
@@ -275,8 +275,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="req" for="comments">Review</label>
-                                        <textarea class="form-control" rows="5" id="comments"
-                                            required="required"></textarea>
+                                        <textarea class="form-control" rows="5" id="comments" required="required"></textarea>
                                     </div>
                                     <button type="submit" class="btn-submit">Submit Review</button>
                                 </form>
