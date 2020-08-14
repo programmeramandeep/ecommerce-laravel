@@ -17,6 +17,8 @@
             autofocus: true
         }),
 
+        // <img src="${window.location.origin}/storage/${ hit.image }" alt="img" class="algolia-thumb-result img-thumbnail border-0" />
+
         instantsearch.widgets.hits({
             container: "#hits",
             templates: {
@@ -24,9 +26,7 @@
                 item(hit) {
                     return `
           <article>
-          <img src="${window.location.origin}/storage/${
-                        hit.image
-                    }" alt="img" class="algolia-thumb-result img-thumbnail border-0" />
+          <img src="https://via.placeholder.com/150" alt="img" class="algolia-thumb-result img-thumbnail border-0" />
             <a href="${window.location.origin}/shop/${hit.slug}">
             <strong>${instantsearch.highlight({
                 attribute: "name",
