@@ -7,12 +7,10 @@
         <!-- Slider Background  Image Start-->
         <div id="slider" class="nivoSlider">
             <a href="">
-                <img src="https://via.placeholder.com/1920x560" data-thumb="https://via.placeholder.com/1920x560" alt=""
-                    title="#slider-1-caption1" />
+                <img src="https://via.placeholder.com/1920x560" data-thumb="https://via.placeholder.com/1920x560" alt="" title="#slider-1-caption1" />
             </a>
             <a href="">
-                <img src="https://via.placeholder.com/1920x560" data-thumb="https://via.placeholder.com/1920x560" alt=""
-                    title="#slider-1-caption2" />
+                <img src="https://via.placeholder.com/1920x560" data-thumb="https://via.placeholder.com/1920x560" alt="" title="#slider-1-caption2" />
             </a>
         </div>
         <!-- Slider Background  Image Start-->
@@ -22,8 +20,8 @@
                     <div class="text-content">
                         <h4 class="title2 wow bounceInLeft mb-16" data-wow-duration="2s" data-wow-delay="0s">Big Sale
                         </h4>
-                        <h1 class="title1 wow bounceInRight mb-16" data-wow-duration="2s" data-wow-delay="1s">Hand Tools
-                            <br>Circular Saw & Power Saw</h1>
+                        <h1 class="title1 wow bounceInRight mb-16" data-wow-duration="2s" data-wow-delay="1s">Lorem Ipsum
+                            <br>Dolor met smati</h1>
                         <div class="banner-readmore wow bounceInUp mt-35" data-wow-duration="2s" data-wow-delay="2s">
                             <a class="">Shop Now</a>
                         </div>
@@ -37,9 +35,9 @@
                     <div class="text-content slide-2">
                         <h4 class="title2 wow bounceInLeft mb-16" data-wow-duration="1s" data-wow-delay="1s">Big Sale
                         </h4>
-                        <h1 class="title1 wow flipInX  mb-16" data-wow-duration="1s" data-wow-delay="2s">Hand Tools
-                            <br>Circular Saw & Power Saw</h1>
-                        <div class="banner-readmore wow bounceInUp mt-35" data-wow-duration="1s" data-wow-delay="2s">
+                        <h1 class="title1 wow bounceInRight mb-16" data-wow-duration="2s" data-wow-delay="1s">Lorem Ipsum
+                            <br>Dolor met smati</h1>
+                        <div class="banner-readmore wow bounceInUp mt-35" data-wow-duration="2s" data-wow-delay="2s">
                             <a class="">Shop Now</a>
                         </div>
                     </div>
@@ -176,8 +174,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
                                     <div class="product-rating">
@@ -195,8 +192,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
                                     <div class="product-rating">
@@ -214,8 +210,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
                                     <div class="product-rating">
@@ -233,8 +228,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
                                     <div class="product-rating">
@@ -252,107 +246,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                        </div>
-                        <!-- Double Product End -->
-                        <!-- Double Product Start -->
-                        <div class="double-pro">
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
-                                </div>
-                                <div class="pro-content">
-                                    <div class="product-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4><a href="">Products Name Here</a></h4>
-                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
-                                </div>
-                            </div>
-                            <!-- Single Product End -->
-                            <!-- Single Product Start -->
-                            <div class="single-product">
-                                <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
                                     <div class="product-rating">
@@ -374,8 +268,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
                                     <div class="product-rating">
@@ -393,8 +286,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
                                     <div class="product-rating">
@@ -412,8 +304,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
                                     <div class="product-rating">
@@ -431,8 +322,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
                                     <div class="product-rating">
@@ -450,8 +340,101 @@
                             <!-- Single Product Start -->
                             <div class="single-product">
                                 <div class="pro-img">
-                                    <a href=""><img class="img" src="https://via.placeholder.com/150"
-                                            alt="product-image"></a>
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                        </div>
+                        <!-- Double Product End -->
+                        <!-- Double Product Start -->
+                        <div class="double-pro">
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <h4><a href="">Products Name Here</a></h4>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href=""><img class="img" src="https://via.placeholder.com/150" alt="product-image"></a>
                                 </div>
                                 <div class="pro-content">
                                     <div class="product-rating">
@@ -493,10 +476,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -513,11 +494,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -529,10 +508,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -549,11 +526,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -566,10 +541,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -586,11 +559,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -602,10 +573,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -622,11 +591,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -639,10 +606,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -659,11 +624,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -675,10 +638,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -695,11 +656,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -719,10 +678,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -739,11 +696,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -755,10 +710,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -775,11 +728,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -792,10 +743,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -812,11 +761,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -828,10 +775,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -848,11 +793,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -864,10 +807,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -884,11 +825,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -900,10 +839,8 @@
                                     <!-- Product Image Start -->
                                     <div class="pro-img">
                                         <a href="">
-                                            <img class="primary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
-                                            <img class="secondary-img" src="https://via.placeholder.com/150"
-                                                alt="single-product">
+                                            <img class="primary-img" src="https://via.placeholder.com/150" alt="single-product">
+                                            <img class="secondary-img" src="https://via.placeholder.com/150" alt="single-product">
                                         </a>
                                     </div>
                                     <!-- Product Image End -->
@@ -920,11 +857,9 @@
                                         <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
                                         <div class="pro-actions">
                                             <div class="actions-secondary">
-                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                                 <a class="" data-toggle="tooltip" title="Add to Cart">Add To Cart</a>
-                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-signal"></i></a>
+                                                <a href="" data-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -937,7 +872,7 @@
                     </div>
                     <!-- Tab-Content End -->
                     <div class="single-banner zoom mt-30 ">
-                        <a href="#"><img src="{{ asset('img/banner/tab-banner.jpg') }}" alt="slider-banner"></a>
+                        <a href="#"><img src="https://via.placeholder.com/870x240" alt="slider-banner"></a>
                     </div>
                 </div>
                 <!-- New Pro Content End -->

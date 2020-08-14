@@ -15,13 +15,12 @@
                         <h3>Contact us</h3>
                         <div class="footer-content">
                             <div class="loc-address">
-                                <span><i class="fa fa-map-marker"></i>184 Main Rd E, St Albans VIC 3021,
-                                    Australia.</span>
-                                <span><i class="fa fa-envelope-o"></i>Mail Us : yourinfo@example.com</span>
-                                <span><i class="fa fa-phone"></i>Phone: + 00 254 254565 54</span>
+                                <span><i class="fa fa-map-marker"></i>Whitefield, Bangalore 560066,
+                                    India.</span>
+                                <span><i class="fa fa-envelope-o"></i>programmeramandeep@gmail.com</span>
+                                <span><i class="fa fa-phone"></i>+91 7696155527</span>
                             </div>
-                            <div class="payment-mth"><a href=""><img class="img" src="{{ asset('img/footer/1.png') }}"
-                                        alt="payment-image"></a></div>
+                            <div class="payment-mth"><a href=""><img class="img" src="{{ asset('img/footer/1.png') }}" alt="payment-image"></a></div>
                         </div>
                     </div>
                 </div>
