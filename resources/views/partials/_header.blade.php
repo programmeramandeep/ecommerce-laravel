@@ -7,7 +7,7 @@
                 <!-- Header Top left Start -->
                 <div class="col-lg-4 col-md-12 d-center">
                     <div class="header-top-left">
-                        <img src="{{ secure_asset('img/icon/call.png') }}" alt="">Call Us : +11 222 3333
+                        <img src="{{ asset('img/icon/call.png') }}" alt="">Call Us : +11 222 3333
                     </div>
                 </div>
                 <!-- Header Top left End -->
@@ -114,7 +114,7 @@
                                             <div class="cart-img">
                                                 <a href="{{ route('shop.show', $item->model->slug) }}">
                                                     @if ($item->model->image == '')
-                                                    <img src="{{ secure_asset('storage/'.$item->model->image) }}" alt="cart-image">
+                                                    <img src="{{ asset('storage/'.$item->model->image) }}" alt="cart-image">
                                                     @else
                                                     <img src="https://via.placeholder.com/150" alt="cart-image">
                                                     @endif

@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet">
 
     <!-- place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ secure_asset('img/icon/favicon.png') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/icon/favicon.png') }}" />
 
     <!-- Google Font css -->
     <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet" />
