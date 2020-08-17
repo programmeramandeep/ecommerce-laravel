@@ -6,6 +6,7 @@ use App\Http\Requests\CheckoutRequest;
 use App\Mail\OrderPlaced;
 use App\Order;
 use App\OrderProduct;
+use App\Product;
 use Cart;
 use Stripe\Stripe;
 use Stripe\Exception\CardException;
@@ -50,6 +51,11 @@ class CheckoutController extends Controller
      */
     public function store(CheckoutRequest $request)
     {
+        // Check race condition when there are less items available to purchase
+        if ($this->productsAreNoLongerAvailable()) {
+            return back()->withErrors('Sorry! One of the items in your cart is no longer available!');
+        }
+
         try {
             Stripe::setApiKey(config('services.stripe.secret_key'));
 
@@ -70,6 +76,9 @@ class CheckoutController extends Controller
 
             // Send Mail
             Mail::queue(new OrderPlaced($order));
+
+            // Decrease the quantities of all the products in the cart
+            $this->decreaseQuantities();
 
             // Clear cart
             Cart::clear();
@@ -173,5 +182,26 @@ class CheckoutController extends Controller
         }
 
         return $tax;
+    }
+
+    protected function decreaseQuantities()
+    {
+        foreach (Cart::getContent() as $item) {
+            $product = Product::find($item->model->id);
+
+            $product->update(['quantity' => $product->quantity - $item->quantity]);
+        }
+    }
+
+    protected function productsAreNoLongerAvailable()
+    {
+        foreach (Cart::getContent() as $item) {
+            $product = Product::find($item->model->id);
+            if ($product->quantity < $item->quantity) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

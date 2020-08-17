@@ -124,8 +124,10 @@
                         </p>
                     </div>
                     <div class="pro-ref mb-15">
-                        <p><span class="in-stock">IN STOCK</span><span class="sku">50</span></p>
+                        {!! $stockLevel !!}
+                        {{-- <p><span class="in-stock"></span></p> --}}
                     </div>
+                    @if ($product->quantity > 0)
                     <div class="box-quantity">
                         <form action="{{ route('cart.store', $product) }}" method="POST">
                             @csrf
@@ -136,6 +138,7 @@
                             <button type="submit" class="add-cart">Add to Cart</button>
                         </form>
                     </div>
+                    @endif
                     <div class="product-link">
                         <ul class="list-inline">
                             <li><a href="">Add to Wish List</a></li>

@@ -59,7 +59,7 @@
                                 <td class="product-price"><span class="amount">{{ $item->model->presentPrice() }}</span>
                                 </td>
                                 <td class="product-quantity">
-                                    <input type="number" class="quantity" value="{{ $item->quantity }}" data-id="{{ $item->id }}" min="1" max="999" />
+                                    <input type="number" class="quantity" value="{{ $item->quantity }}" data-id="{{ $item->id }}" data-productQuantity="{{ $item->model->quantity }}" min="1" max="999" />
                                 </td>
                                 <td class="product-subtotal">
                                     {{ moneyformat(Cart::get($item->id)->getPriceSum(), 'INR') }}
@@ -162,9 +162,11 @@
         Array.from(classname).forEach(function(element) {
             element.addEventListener('change', function() {
                 const id = element.getAttribute('data-id');
+                const productQuantity = element.getAttribute('data-productQuantity');
 
                 axios.patch(`/cart/${id}`, {
                     quantity: this.value,
+                    product_quantity: productQuantity
                 })
                 .then(function(response) {
                     window.location.href = '{{ route('cart.index') }}';
