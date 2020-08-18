@@ -48,8 +48,18 @@ Route::get('/search-algolia', 'ShopController@searchAlgolia')->name('search-algo
 
 // User routes
 Route::middleware('auth')->group(function () {
+    Route::get('/my-dashboard', 'UsersController@dashboard')->name('users.dashboard');
+
+    Route::get('/my-downloads', 'UsersController@downloads')->name('users.downloads');
+
     Route::get('/my-profile', 'UsersController@edit')->name('users.edit');
-    Route::patch('/my-profile', 'UsersController@update')->name('users.update');
+    Route::patch('/my-profile/{user}', 'UsersController@update')->name('users.update');
+
+    Route::get('/my-password', 'UsersController@password_edit')->name('users-password.edit');
+    Route::patch('/my-password/{user}', 'UsersController@password_update')->name('users-password.update');
+
+    Route::get('/my-address', 'UsersController@address_edit')->name('users-address.edit');
+    Route::patch('/my-address/{user}', 'UsersController@address_update')->name('users-address.update');
 
     Route::get('/my-orders', 'OrdersController@index')->name('orders.index');
     Route::get('/my-orders/{order}', 'OrdersController@show')->name('orders.show');

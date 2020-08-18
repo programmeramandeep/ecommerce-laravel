@@ -2,50 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Create a new controller instance.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
-    public function index()
+    public function __construct()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        $this->middleware('auth');
     }
 
     /**
@@ -54,9 +23,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('pages.users.my-profile')->with(['user' => auth()->user(), 'active' => 'details']);
     }
 
     /**
@@ -66,19 +35,62 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,' . auth()->id(),
+            'phone' => 'required|phone:IN',
+        ]);
+
+        $user->update($request->only('name', 'email', 'phone'));
+
+        return back()->with('success_message', 'Profile (and password) updated successfully!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function dashboard()
     {
-        //
+        return view('pages.users.my-dashboard')->with(['user' => auth()->user(), 'active' => 'dashboard']);
+    }
+
+    public function downloads()
+    {
+        return view('pages.users.my-downloads')->with(['user' => auth()->user(), 'active' => 'downloads']);
+    }
+
+    public function password_edit()
+    {
+        return view('pages.users.my-password')->with(['user' => auth()->user(), 'active' => 'password']);
+    }
+
+    public function password_update(Request $request, User $user)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,' . auth()->id(),
+            'phone' => 'required|phone:IN',
+        ]);
+
+        $user->update($request->only('name', 'email', 'phone'));
+
+        return back()->with('success_message', 'Profile (and password) updated successfully!');
+    }
+
+    public function address_edit()
+    {
+        return view('pages.users.my-address')->with(['user' => auth()->user(), 'active' => 'address']);
+    }
+
+    public function address_update(Request $request, User $user)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,' . auth()->id(),
+            'phone' => 'required|phone:IN',
+        ]);
+
+        $user->update($request->only('name', 'email', 'phone'));
+
+        return back()->with('success_message', 'Profile (and password) updated successfully!');
     }
 }

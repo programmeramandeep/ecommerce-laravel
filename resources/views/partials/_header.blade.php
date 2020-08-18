@@ -80,7 +80,7 @@
                                     <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
                                     @endif
                                     @else
-                                    <li><a href="">Account</a></li>
+                                    <li><a href="{{ route('users.edit') }}">Account</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
