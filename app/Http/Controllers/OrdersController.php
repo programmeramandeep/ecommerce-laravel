@@ -26,7 +26,11 @@ class OrdersController extends Controller
     {
         $orders = auth()->user()->orders()->with('products')->get();
 
-        return view('pages.users.my-orders')->with(['user' => auth()->user(), 'active' => 'orders', 'orders' => $orders]);
+        return view('pages.users.my-orders')->with([
+            'user' => auth()->user(),
+            'active' => 'orders',
+            'orders' => $orders
+        ]);
     }
 
     /**
@@ -43,7 +47,9 @@ class OrdersController extends Controller
 
         $products = $order->products;
 
-        return view('my-order')->with([
+        return view('pages.users.my-order')->with([
+            'user' => auth()->user(),
+            'active' => 'orders',
             'order' => $order,
             'products' => $products,
         ]);

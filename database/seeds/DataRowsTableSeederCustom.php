@@ -852,6 +852,37 @@ class DataRowsTableSeederCustom extends Seeder
             ])->save();
         }
 
+        $dataRow = $this->dataRow($ordersDataType, 'status');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type'         => 'select_dropdown',
+                'display_name' => __('voyager::seeders.data_rows.status'),
+                'required'     => 1,
+                'browse'       => 1,
+                'read'         => 1,
+                'edit'         => 1,
+                'add'          => 1,
+                'delete'       => 1,
+                'details'      => [
+                    'default' => 'processing',
+                    'options' => [
+                        'processing' => 'processing',
+                        'cancelled' => 'cancelled',
+                        'processing' => 'processing',
+                        'completed' => 'completed',
+                        'declined' => 'declined',
+                        'refunded' => 'refunded',
+                        'disputed' => 'disputed',
+                        'partially-refunded' => 'partially-refunded',
+                        'awaiting-shipment' => 'awaiting-shipment',
+                        'partially-shipped' => 'partially-shipped'
+
+                    ],
+                ],
+                'order' => 22,
+            ])->save();
+        }
+
         $dataRow = $this->dataRow($ordersDataType, 'created_at');
         if (!$dataRow->exists) {
             $dataRow->fill([
@@ -864,7 +895,7 @@ class DataRowsTableSeederCustom extends Seeder
                 'add'          => 0,
                 'delete'       => 0,
                 'details'      => '',
-                'order'        => 22,
+                'order'        => 23,
             ])->save();
         }
 
@@ -880,7 +911,7 @@ class DataRowsTableSeederCustom extends Seeder
                 'add'          => 0,
                 'delete'       => 0,
                 'details'      => '',
-                'order'        => 23,
+                'order'        => 24,
             ])->save();
         }
     }

@@ -43,20 +43,27 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($orders as $order)
+                                        @php
+                                        $quantity = 0;
+                                        @endphp
                                         <tr>
-                                            <td>1</td>
-                                            <td>May 10, 2018</td>
-                                            <td>Processing</td>
-                                            <td>$25.00 for 1 item </td>
-                                            <td><a class="">view</a></td>
+                                            <td>{{ $order->id }}</td>
+                                            <td>{{ date('M d, Y', strtotime($order->created_at)) }}</td>
+                                            <td class="text-capitalize">{{ $order->status }}</td>
+                                            <td>
+                                                {{ moneyformat($order->billing_total , 'INR') }} for
+                                                @foreach ($order->products as $product)
+                                                @php
+                                                $quantity += $product->pivot->quantity
+                                                @endphp
+                                                @endforeach
+                                                {{ $quantity }}
+                                                item
+                                            </td>
+                                            <td><a href="{{ route('orders.show', $order->id) }}" class="">View</a></td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>May 10, 2018</td>
-                                            <td>Processing</td>
-                                            <td>$17.00 for 1 item </td>
-                                            <td><a class="">view</a></td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

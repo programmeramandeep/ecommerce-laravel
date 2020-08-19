@@ -32,6 +32,7 @@ class CreateOrdersTable extends Migration
             $table->text('billing_order_notes')->nullable();
             $table->text('billing_discount_details')->nullable();
             $table->string('payment_gateway')->default('stripe');
+            $table->enum('status', ['pending', 'cancelled', 'processing', 'completed', 'declined', 'refunded', 'disputed', 'partially-refunded', 'awaiting-shipment', 'partially-shipped'])->default('processing');
             $table->boolean('shipped')->default(false);
             $table->text('error')->nullable();
             $table->timestamps();
