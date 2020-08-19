@@ -10,12 +10,14 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <base href="{{ config('app.url', 'http://localhost:8000') }}">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet">
 
     <!-- place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/icon/favicon.png') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png" />
 
     <!-- Google Font css -->
     <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet" />

@@ -111,7 +111,7 @@
                                             <div class="product-container mb-2">
                                                 <a href="{{ route('shop.show', $product->slug) }}">
                                                     @if ($product->image == '')
-                                                    <img src="{{ asset('storage/'.$product->image) }}" alt="Product Image" class="img-fluid">
+                                                    <img src="storage/{{ $product->image }}" alt="Product Image" class="img-fluid">
                                                     @else
                                                     <img src="https://via.placeholder.com/250" class="img-fluid">
                                                     @endif
