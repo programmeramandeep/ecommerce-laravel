@@ -7,7 +7,7 @@
         <div class="breadcrumb">
             <ul>
                 <li><a href="{{ url('/') }}">Home</a></li>
-                <li class="active"><a href="{{ route('users.edit') }}">My Accout</a></li>
+                <li class="active"><a href="{{ route('users.dashboard') }}">My Accout</a></li>
             </ul>
         </div>
     </div>
@@ -18,6 +18,10 @@
 <!-- My Account Page Start Here -->
 <div class="my-account white-bg pb-60">
     <div class="container">
+        {{-- Messages --}}
+        @include('partials._messages')
+
+
         <div class="account-dashboard">
             @include('partials._dashboard-details', ['user' => $user])
 
@@ -32,7 +36,7 @@
                         <div id="change-password">
                             <h3>Change Password </h3>
                             <div class="register-form login-form clearfix">
-                                <form action="{{ route('users-password.update', auth()->user()->id) }}" method="POST">
+                                <form action="{{ route('users-password.update') }}" method="POST">
                                     @csrf
                                     @method('PATCH')
 
@@ -49,12 +53,12 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="newpassword" class="col-lg-3 col-md-4 col-form-label">{{ __('New Password') }}</label>
+                                        <label for="new-password" class="col-lg-3 col-md-4 col-form-label">{{ __('New Password') }}</label>
                                         <div class="col-lg-6 col-md-8">
-                                            <input id="newpassword" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Enter your password..." required autocomplete="new-password">
+                                            <input id="new-password" type="password" class="form-control @error('new-password') is-invalid @enderror" name="new-password" placeholder="Enter your password..." required autocomplete="new-password">
                                             <button class="btn show-btn" type="button">Show</button>
 
-                                            @error('password')
+                                            @error('new-password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -65,7 +69,7 @@
                                     <div class="form-group row">
                                         <label for="v-password" class="col-lg-3 col-md-4 col-form-label">{{ __('Confirm Password') }}</label>
                                         <div class="col-lg-6 col-md-8">
-                                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm password" required autocomplete="new-password">
+                                            <input id="confirm-password" type="password" class="form-control" name="confirm-password" placeholder="Confirm password" required autocomplete="new-password">
                                             <button class="btn show-btn" type="button">Show</button>
                                         </div>
                                     </div>

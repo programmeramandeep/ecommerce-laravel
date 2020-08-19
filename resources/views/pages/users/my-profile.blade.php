@@ -7,7 +7,7 @@
         <div class="breadcrumb">
             <ul>
                 <li><a href="{{ url('/') }}">Home</a></li>
-                <li class="active"><a href="{{ route('users.edit') }}">My Accout</a></li>
+                <li class="active"><a href="{{ route('users.dashboard') }}">My Accout</a></li>
             </ul>
         </div>
     </div>
@@ -18,6 +18,9 @@
 <!-- My Account Page Start Here -->
 <div class="my-account white-bg pb-60">
     <div class="container">
+        {{-- Messages --}}
+        @include('partials._messages')
+
         <div class="account-dashboard">
             @include('partials._dashboard-details', ['user' => $user])
 
@@ -32,7 +35,7 @@
                         <div id="account-details">
                             <h3>Account details </h3>
                             <div class="register-form login-form clearfix">
-                                <form action="{{ route('users.update', auth()->user()->id) }}" method="POST">
+                                <form action="{{ route('users.update') }}" method="POST">
                                     @csrf
                                     @method('PATCH')
 

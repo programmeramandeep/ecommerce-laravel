@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PasswordChangeRequest;
 use App\User;
+use Hash;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -15,6 +17,26 @@ class UsersController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    /**
+     * User dashboard page.
+     *
+     * @return void
+     */
+    public function dashboard()
+    {
+        return view('pages.users.my-dashboard')->with(['user' => auth()->user(), 'active' => 'dashboard']);
+    }
+
+    /**
+     * User download page.
+     *
+     * @return void
+     */
+    public function downloads()
+    {
+        return view('pages.users.my-downloads')->with(['user' => auth()->user(), 'active' => 'downloads']);
     }
 
     /**
@@ -43,54 +65,62 @@ class UsersController extends Controller
             'phone' => 'required|phone:IN',
         ]);
 
-        $user->update($request->only('name', 'email', 'phone'));
+        User::find(auth()->user()->id)
+            ->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+            ]);
 
-        return back()->with('success_message', 'Profile (and password) updated successfully!');
+        return redirect()
+            ->back()
+            ->with('success', 'Profile updated successfully!');
     }
 
-    public function dashboard()
-    {
-        return view('pages.users.my-dashboard')->with(['user' => auth()->user(), 'active' => 'dashboard']);
-    }
-
-    public function downloads()
-    {
-        return view('pages.users.my-downloads')->with(['user' => auth()->user(), 'active' => 'downloads']);
-    }
-
+    /**
+     * User password change page.
+     *
+     * @return void
+     */
     public function password_edit()
     {
         return view('pages.users.my-password')->with(['user' => auth()->user(), 'active' => 'password']);
     }
 
-    public function password_update(Request $request, User $user)
+    /**
+     * User password change request.
+     *
+     * @return void
+     */
+    public function password_update(PasswordChangeRequest $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,' . auth()->id(),
-            'phone' => 'required|phone:IN',
-        ]);
+        User::find(auth()->user()->id)
+            ->update([
+                'password' => Hash::make($request->{'new-password'}),
+            ]);
 
-        $user->update($request->only('name', 'email', 'phone'));
-
-        return back()->with('success_message', 'Profile (and password) updated successfully!');
+        return redirect()
+            ->back()
+            ->with('success', 'Password has been changed successfully!');
     }
 
+    /**
+     * User address page.
+     *
+     * @return void
+     */
     public function address_edit()
     {
         return view('pages.users.my-address')->with(['user' => auth()->user(), 'active' => 'address']);
     }
 
-    public function address_update(Request $request, User $user)
+    /**
+     * User address change request.
+     *
+     * @return void
+     */
+    public function address_update(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,' . auth()->id(),
-            'phone' => 'required|phone:IN',
-        ]);
-
-        $user->update($request->only('name', 'email', 'phone'));
-
         return back()->with('success_message', 'Profile (and password) updated successfully!');
     }
 }

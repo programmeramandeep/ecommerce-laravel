@@ -26,7 +26,7 @@
         </div>
         <div class="col-lg-2 col-md-6">
             <div class="d-single-info text-center">
-                <a class=""><i class="fa fa-cart-plus" aria-hidden="true"></i>view
+                <a href="{{ route('cart.index') }}" class=""><i class="fa fa-cart-plus" aria-hidden="true"></i> View
                     cart</a>
             </div>
         </div>

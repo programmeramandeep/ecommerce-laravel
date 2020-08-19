@@ -103,7 +103,7 @@
     <div class="footer-bottom off-white-bg2">
         <div class="container">
             <div class="footer-bottom-content">
-                <p class="copy-right-text">Copyright © <a href="">Amandeep Singh</a> All Rights Reserved.</p>
+                <p class="copy-right-text">Developed by <a target="_blank" href="http://singhprogrammer.com">Amandeep Singh</a></p>
                 <div class="footer-social-content">
                     {{ menu('footer', 'partials.menus.footer') }}
                 </div>

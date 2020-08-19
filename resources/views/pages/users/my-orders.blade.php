@@ -7,7 +7,7 @@
         <div class="breadcrumb">
             <ul>
                 <li><a href="{{ url('/') }}">Home</a></li>
-                <li class="active"><a href="{{ route('users.edit') }}">My Accout</a></li>
+                <li class="active"><a href="{{ route('users.dashboard') }}">My Accout</a></li>
             </ul>
         </div>
     </div>
