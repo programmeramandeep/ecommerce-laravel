@@ -24,6 +24,7 @@
         "nicolaslopezj/searchable": "^1.13",
         "propaganistas/laravel-phone": "^4.2",
         "stripe/stripe-php": "^7.44",
+        "symfony/http-kernel": "5.1.5",
         "tcg/voyager": "^1.4"
     },
     "require-dev": {
